@@ -1,0 +1,8 @@
+\vskip -8pt
+\contentsline {schapter}{Introduction}{iii}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Vaman-ESP32}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Measuring Unknown Resistance Using ESP32}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Components}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Setting up the Display}{1}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Measuring the resistance}{3}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Explanation}{5}{subsection.1.1.4}%
