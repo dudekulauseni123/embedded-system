@@ -307,7 +307,7 @@ Digital Design through Vaman
 %\IEEEpeerreviewmaketitle
 \fi
 \begin{abstract}
-Through this manual, we learn how to measure an unknown resistance through ESP32 and display it on an LCD.
+Through this manual, we will learn how to setting up the ESP32 as a Master and Arduino as a Slave using I2C protocol.
 \end{abstract}
 \subsection{Components}
 \numberwithin{equation}{enumi}
@@ -318,30 +318,24 @@ Through this manual, we learn how to measure an unknown resistance through ESP32
 
 \begin{table}[!h]
 \centering
-\input{./vaman/esp32/lcd/figs/components.tex}
-\caption{Components}
-\label{table:components}
+\input{./vaman/esp32/I2C/figs/components7.tex}
+\caption{}
+\label{table:i2c-components}
 \end{table}
-\subsection{Setting up the Display}
+\subsection{Setting up the Master and Slave}
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 \numberwithin{table}{enumi}
-\item
-Plug the LCD in Fig. \ref{fig:lcd} to the breadboard.
 
 %
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{./vaman/esp32/lcd/figs/lcd.eps}
-\caption{LCD pins}
-\label{fig:lcd}
-\end{figure}
-
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{./vaman/esp32/I2C/figs/lcd.eps}
+%\caption{lcd}
+%\label{fig:lcd}
+%\end{figure}
 %
-%\item
-%Connect the 220$\Omega$ resistance from $V_{cc}$ to pin 15 (Led+) of the LCD.
-
 %
 %%
 %\item
@@ -351,75 +345,94 @@ Plug the LCD in Fig. \ref{fig:lcd} to the breadboard.
 %\item
 %Connect pin 3 of the LCD to GND.  This is required for contrast.
 %
+
+
 \item
-Connect the ESP32 pins to LCD pins as per Table \ref{Table:1}. Make sure that all 5V sources are connected to the LCD through a 220 $\Omega$ resistance.
+Connect the ESP32 pins to Arduino pins as per Table \ref{Table:1 Arduino-ESP}.
 \begin{table}[h]
 \centering
-\input{./vaman/esp32/lcd/figs/table1.tex}
-\caption{Make sure that all 5V sources are connected to the LCD through a 220 $\Omega$ resistance.}
-\label{Table:1}
+\input{./vaman/esp32/I2C/figs/table1.tex}
+\caption{}
+\label{Table:1 Arduino-ESP}
 \end{table}
 
-\item Execute the following code after editing the wifi credentials
+\item
+Connect the ESP32 pins to LCD pins as per Table \ref{Table:2 ESP-LCD}.
+\begin{table}[h]
+\centering
+\input{./vaman/esp32/I2C/figs/table2.tex}
+\caption{}
+\label{Table:2 ESP-LCD}
+\end{table}
 
+
+\item
+Configure Arduino Uno as a Slave using the following code.\\
 \begin{lstlisting}
-vaman/esp32/lcd/codes/setup
+vaman/esp32/I2C/codes/I2C_Sender_Arduino/src/main.cpp
 \end{lstlisting}
-You should see the following  message
+\item
+Now configure ESP32 as a Master using the following code.\\
 \begin{lstlisting}
-Hi
-This is CSP Lab
+vaman/esp32/I2C/codes/I2C_Reciever_ESP32/src/main.cpp
 \end{lstlisting}
-\item Modify the above code to display your name.
+
 \end{enumerate}
-\subsection{Measuring the resistance}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
 
-\item
-Connect the 5V pin of the ESP32 to an extreme pin of the Breadboard shown in Fig. \ref{fig:breadboard}.  Let this pin be $V_{cc}$.
+%\end{enumerate}
+%
+%\section{Display Resistance on LCD}
+%
+%\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+%\numberwithin{equation}{enumi}
+%\numberwithin{figure}{enumi}
+%\numberwithin{table}{enumi}
 
-%
-%
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{./vaman/esp32/lcd/figs/breadboard.eps}
-\caption{Breadboard}
-\label{fig:breadboard}
-\end{figure}
-%
-\item
-Connect the GND pin of the ESP32 to the opposite extreme pin of the Breadboard.
-
-%
-%
-\item
-Let $R_1$ be the known resistor and $R_2$ be the unknown resistor.  Connect $R_1$ and $R_2$ in series such that $R_1$ is connected
-to $V_{cc}$ and $R_2$ is connected to GND. Refer to Fig. \ref{fig:voltage_divider}
-
-%
-%
-\begin{figure}
-\centering
-%\includegraphics[width=\columnwidth]{./figs/voltage_divider.eps}
-\resizebox {\columnwidth} {!} {
-%\input{./figs/collpits.tex}
-\input{./vaman/esp32/lcd/figs/vrr.tex}
-}
-%\input{./figs/vrr.tex}
-%\includegraphics[width=\columnwidth]{./figs/voltage_divider.eps}
-\caption{Voltage Divider}
-\label{fig:voltage_divider}
-\end{figure}
-%
-\item
-Connect the junction between the two resistors to  the GPIO34 pin on the ESP32.
+%\begin{center}
+%\begin{tabular}{ |p{3cm}|p{3cm}|}
+ %\hline
+ %\multicolumn{2}{|c|}{\textbf{ESP32 to LCD Connection}} \\
+ %\hline
+ %\textbf{ESP32 Pins} & \textbf{LCD Pins} \\
+ %\hline
+ %Pin D2 & Pin D7\\
+ %\hline
+ %Pin D3 & Pin D6\\
+ %\hline
+ %Pin D4 & Pin D5\\
+ %\hline
+ %Pin D5 & Pin D4\\
+ %\hline
+ %Pin 11 & Pin 6\\
+ %\hline
+ %Pin 12 & Pin 4\\
+ %\hline
+ %GND Pin & Pin 1 and Pin 5\\
+ %\hline
+ %5V  Pin & Pin 2\\
+ %\hline
+%\end{tabular}
+%\end{center}
 
 %
-\item
-Connect the ESP32 to the computer so that it is powered.
+%%
+%\item
+%The Potentiometer to LCD connection are given below: 
+%\begin{center}
+%\begin{tabular}{ |p{3cm}|p{3cm}|}
+ %\hline
+ %\multicolumn{2}{|c|}{\textbf{Potentiometer to LCD Connection}} \\
+ %\hline
+ %\textbf{Potentiometer} & \textbf{LCD Pins} \\
+ %\hline
+ %Middle Pin & Pin 3\\
+ %\hline
+ %Pin 1 & Pin 2(Vcc Pin)\\
+ %\hline
+ %Pin 3 & Pin 1(GND Pin)\\
+ %\hline
+%\end{tabular}
+%\end{center}
 %
 %
 %
@@ -427,43 +440,6 @@ Connect the ESP32 to the computer so that it is powered.
 %The resistance is an analogue function,but the value displayed on LCD is digital function.So,we need to do analogue to digital conversion,ESP32 has built-in 10-bit analogue to digital converter.
 %Two resistors are used, one of which is known resistor value and other is unknown resistor value.
 %Take 2 resistors,one known resistor with resistance value(For e.g-1K,2K,10K),here we have taken 1K and another an unknown resistor whose value we are going to calculate.
-%
-%
-%
 
-\item
-Execute the following code after editing the wifi credentials
 
-\begin{lstlisting}
-vaman/esp32/lcd/codes/resistance
-\end{lstlisting}
-%\solution 
-%%
-%\lstinputlisting{./codes/ESP32 _LCD/src/main.cpp}
 
-\end{enumerate}
-\subsection{Explanation}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
-
-%\begin{enumerate}
-
-\item We create a variable called analogPin and assign it to 0. 
-This is because the voltage value we are going to read is connected to analogPin GPIO34.
-
-\item  The 12-bit ADC can differentiate 4096 discrete voltage levels, 5 volt is applied to 2 resistors and the voltage sample is taken in between the resistors. The value which we get from analogPin can be between 0 and 4095. 0 would represent 0 volts falls across the unknown resistor. A value of 4095 would mean that practically all 5 volts falls across the unknown resistor.
-
-\item  $V_{out}$ represents the divided voltage that falls across the unknown resistor.
-
-\item  The Ohm meter in this manual works on the principle of the voltage divider shown in Fig. \ref{fig:voltage_divider}.
-%
-\begin{align}
-V_{out}&=\frac{R_1}{R_1+R_2}V_{in} \\
-\Rightarrow R_2&=R_1\brak{\frac{V_{in}}{V_{out}}-1}
-\end{align}
-%
-In the above, $V_{in} = 5$V, $R_1 = 220 \Omega$.
-\item Repeat the exercise with another unknown resistance.
-\end{enumerate}
