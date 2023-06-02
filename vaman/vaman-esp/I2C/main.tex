@@ -318,7 +318,7 @@ Through this manual, we will learn how to setting up the ESP32 as a Master and A
 
 \begin{table}[!h]
 \centering
-\input{./vaman/esp32/I2C/figs/components7.tex}
+\input{./vaman/vaman-esp/I2C/figs/components7.tex}
 \caption{}
 \label{table:i2c-components}
 \end{table}
@@ -351,7 +351,7 @@ Through this manual, we will learn how to setting up the ESP32 as a Master and A
 Connect the ESP32 pins to Arduino pins as per Table \ref{Table:1 Arduino-ESP}.
 \begin{table}[h]
 \centering
-\input{./vaman/esp32/I2C/figs/table1.tex}
+\input{./vaman/vaman-esp/I2C/figs/table1.tex}
 \caption{}
 \label{Table:1 Arduino-ESP}
 \end{table}
@@ -360,21 +360,23 @@ Connect the ESP32 pins to Arduino pins as per Table \ref{Table:1 Arduino-ESP}.
 Connect the ESP32 pins to LCD pins as per Table \ref{Table:2 ESP-LCD}.
 \begin{table}[h]
 \centering
-\input{./vaman/esp32/I2C/figs/table2.tex}
+\input{./vaman/vaman-esp/I2C/figs/table2.tex}
 \caption{}
 \label{Table:2 ESP-LCD}
 \end{table}
+
+\item The Vaman pin diagram is available in Fig. \ref{fig:vaman-pin_sheet}
 
 
 \item
 Configure Arduino Uno as a Slave using the following code.\\
 \begin{lstlisting}
-vaman/esp32/I2C/codes/I2C_Sender_Arduino/src/main.cpp
+vaman/vaman-esp/I2C/codes/I2C_Sender_Arduino/src/main.cpp
 \end{lstlisting}
 \item
 Now configure ESP32 as a Master using the following code.\\
 \begin{lstlisting}
-vaman/esp32/I2C/codes/I2C_Reciever_ESP32/src/main.cpp
+vaman/vaman-esp/I2C/codes/I2C_Reciever_ESP32/src/main.cpp
 \end{lstlisting}
 
 \end{enumerate}
