@@ -307,7 +307,7 @@ Digital Design through Vaman
 %\IEEEpeerreviewmaketitle
 \fi
 \begin{abstract}
-Through this manual, we learn how to measure an unknown resistance through ESP32 and display it on an LCD.
+Through this manual, we learn how to measure an unknown resistance through Vaman-ESP and display it on an LCD.
 \end{abstract}
 \subsection{Components}
 \numberwithin{equation}{enumi}
@@ -318,25 +318,30 @@ Through this manual, we learn how to measure an unknown resistance through ESP32
 
 \begin{table}[!h]
 \centering
-\input{./vaman/esp32/lcd/figs/components.tex}
+\input{./vaman/vaman-esp/lcd/figs/components.tex}
 \caption{Components}
 \label{table:components}
 \end{table}
+
 \subsection{Setting up the Display}
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 \numberwithin{table}{enumi}
+
+	
+
 \item
 Plug the LCD in Fig. \ref{fig:lcd} to the breadboard.
 
 %
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{./vaman/esp32/lcd/figs/lcd.eps}
+\includegraphics[width=\columnwidth]{./vaman/vaman-esp/lcd/figs/lcd.eps}
 \caption{LCD pins}
 \label{fig:lcd}
 \end{figure}
+
 
 %
 %\item
@@ -352,10 +357,18 @@ Plug the LCD in Fig. \ref{fig:lcd} to the breadboard.
 %Connect pin 3 of the LCD to GND.  This is required for contrast.
 %
 \item
-Connect the ESP32 pins to LCD pins as per Table \ref{Table:1}. Make sure that all 5V sources are connected to the LCD through a 220 $\Omega$ resistance.
+Connect the Vaman-ESP pins to LCD pins as per Table \ref{Table:1}. Make sure that all 5V sources are connected to the LCD through a 220 $\Omega$ resistance.
+\item
+The Vaman pin diagram is available in Fig. \ref{fig:vaman-pin_sheet}
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{./vaman/vaman-esp/lcd/figs/pin_sheet.png}
+\caption{Vaman pins}
+\label{fig:vaman-pin_sheet}
+\end{figure}	
 \begin{table}[h]
 \centering
-\input{./vaman/esp32/lcd/figs/table1.tex}
+\input{./vaman/vaman-esp/lcd/figs/table1.tex}
 \caption{Make sure that all 5V sources are connected to the LCD through a 220 $\Omega$ resistance.}
 \label{Table:1}
 \end{table}
@@ -363,7 +376,7 @@ Connect the ESP32 pins to LCD pins as per Table \ref{Table:1}. Make sure that al
 \item Execute the following code after editing the wifi credentials
 
 \begin{lstlisting}
-vaman/esp32/lcd/codes/setup
+vaman/vaman-esp/lcd/codes/setup
 \end{lstlisting}
 You should see the following  message
 \begin{lstlisting}
@@ -379,19 +392,19 @@ This is CSP Lab
 \numberwithin{table}{enumi}
 
 \item
-Connect the 5V pin of the ESP32 to an extreme pin of the Breadboard shown in Fig. \ref{fig:breadboard}.  Let this pin be $V_{cc}$.
+Connect the 5V pin of the Vaman-ESP to an extreme pin of the Breadboard shown in Fig. \ref{fig:breadboard}.  Let this pin be $V_{cc}$.
 
 %
 %
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{./vaman/esp32/lcd/figs/breadboard.eps}
+\includegraphics[width=\columnwidth]{./vaman/vaman-esp/lcd/figs/breadboard.eps}
 \caption{Breadboard}
 \label{fig:breadboard}
 \end{figure}
 %
 \item
-Connect the GND pin of the ESP32 to the opposite extreme pin of the Breadboard.
+Connect the GND pin of the Vaman-ESP to the opposite extreme pin of the Breadboard.
 
 %
 %
@@ -406,7 +419,7 @@ to $V_{cc}$ and $R_2$ is connected to GND. Refer to Fig. \ref{fig:voltage_divide
 %\includegraphics[width=\columnwidth]{./figs/voltage_divider.eps}
 \resizebox {\columnwidth} {!} {
 %\input{./figs/collpits.tex}
-\input{./vaman/esp32/lcd/figs/vrr.tex}
+\input{./vaman/vaman-esp/lcd/figs/vrr.tex}
 }
 %\input{./figs/vrr.tex}
 %\includegraphics[width=\columnwidth]{./figs/voltage_divider.eps}
@@ -415,11 +428,11 @@ to $V_{cc}$ and $R_2$ is connected to GND. Refer to Fig. \ref{fig:voltage_divide
 \end{figure}
 %
 \item
-Connect the junction between the two resistors to  the GPIO34 pin on the ESP32.
+Connect the junction between the two resistors to  the GPIO34 pin on the Vaman-ESP.
 
 %
 \item
-Connect the ESP32 to the computer so that it is powered.
+Connect the Vaman-ESP to the computer so that it is powered.
 %
 %
 %
@@ -435,7 +448,7 @@ Connect the ESP32 to the computer so that it is powered.
 Execute the following code after editing the wifi credentials
 
 \begin{lstlisting}
-vaman/esp32/lcd/codes/resistance
+vaman/vaman-esp/lcd/codes/resistance
 \end{lstlisting}
 %\solution 
 %%
