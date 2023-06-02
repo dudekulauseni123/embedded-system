@@ -307,7 +307,7 @@ Digital Design through Vaman
 %\IEEEpeerreviewmaketitle
 \fi
 \begin{abstract}
-Through this manual, we will learn how to setting up the ESP32 as a Master and Arduino as a Slave using I2C protocol.
+Through this manual, we will learn how to setting up the vaman-ESP as a Master and Arduino as a Slave using I2C protocol.
 \end{abstract}
 \subsection{Components}
 \numberwithin{equation}{enumi}
@@ -348,7 +348,7 @@ Through this manual, we will learn how to setting up the ESP32 as a Master and A
 
 
 \item
-Connect the ESP32 pins to Arduino pins as per Table \ref{Table:1 Arduino-ESP}.
+Connect the vaman-ESP pins to Arduino pins as per Table \ref{Table:1 Arduino-ESP}.
 \begin{table}[h]
 \centering
 \input{./vaman/vaman-esp/I2C/figs/table1.tex}
@@ -357,7 +357,7 @@ Connect the ESP32 pins to Arduino pins as per Table \ref{Table:1 Arduino-ESP}.
 \end{table}
 
 \item
-Connect the ESP32 pins to LCD pins as per Table \ref{Table:2 ESP-LCD}.
+Connect the vaman-ESP pins to LCD pins as per Table \ref{Table:2 ESP-LCD}.
 \begin{table}[h]
 \centering
 \input{./vaman/vaman-esp/I2C/figs/table2.tex}
@@ -374,7 +374,7 @@ Configure Arduino Uno as a Slave using the following code.\\
 vaman/vaman-esp/I2C/codes/I2C_Sender_Arduino/src/main.cpp
 \end{lstlisting}
 \item
-Now configure ESP32 as a Master using the following code.\\
+Now configure vaman-ESP as a Master using the following code.\\
 \begin{lstlisting}
 vaman/vaman-esp/I2C/codes/I2C_Reciever_ESP32/src/main.cpp
 \end{lstlisting}

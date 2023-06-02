@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.8)  2 JUN 2023 11:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.8)  2 JUN 2023 11:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1424,8 +1424,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Chapter 1.
 
-Overfull \hbox (35.66536pt too wide) in paragraph at lines 202--202
-[]\OT1/cmss/bx/n/20.74 Measuring Un-known Re-sis-tance Us-ing ESP32 
+Overfull \hbox (45.8626pt too wide) in paragraph at lines 202--202
+[]\OT1/cmss/bx/n/20.74 Measuring Un-known Re-sis-tance Us-ing Vaman-
  []
 
 (./vaman/vaman-esp/lcd/main.tex (./vaman/vaman-esp/lcd/figs/components.tex
@@ -1456,6 +1456,9 @@ Package pdftex.def Info: ./vaman/vaman-esp/lcd/figs/lcd-eps-converted-to.pdf  u
 sed on input line 340.
 (pdftex.def)             Requested size: 433.62001pt x 221.96019pt.
 
+Underfull \vbox (badness 7777) has occurred while \output is active []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1464,7 +1467,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1
 
 ]
-<./vaman/vaman-esp/lcd/figs/pin_sheet.png, id=118, 2055.68pt x 1474.50874pt>
+<./vaman/vaman-esp/lcd/figs/pin_sheet.png, id=116, 2055.68pt x 1474.50874pt>
 File: ./vaman/vaman-esp/lcd/figs/pin_sheet.png Graphic file (type png)
 <use ./vaman/vaman-esp/lcd/figs/pin_sheet.png>
 Package pdftex.def Info: ./vaman/vaman-esp/lcd/figs/pin_sheet.png  used on inpu
@@ -1477,6 +1480,19 @@ t line 365.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./vaman/vaman-esp/lcd/figs/lcd-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <./vaman/vaman-esp/lcd/figs/pin_sheet.png>]
 Package epstopdf Info: Source file: <./vaman/vaman-esp/lcd/figs/breadboard.eps>
 
 (epstopdf)                    date: 2023-06-01 14:49:54
@@ -1489,7 +1505,7 @@ converted-to.pdf>
 /breadboard-eps-converted-to.pdf ./vaman/vaman-esp/lcd/figs/breadboard.eps>
 (epstopdf)             \includegraphics on input line 401.
 Package epstopdf Info: Output file is already uptodate.
-<./vaman/vaman-esp/lcd/figs/breadboard-eps-converted-to.pdf, id=121, 774.895pt 
+<./vaman/vaman-esp/lcd/figs/breadboard-eps-converted-to.pdf, id=143, 774.895pt 
 x 252.945pt>
 File: ./vaman/vaman-esp/lcd/figs/breadboard-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -1503,68 +1519,55 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2 <./vaman/vaman-esp/lcd/figs/lcd-eps-converted-to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./vaman/vaman-esp/lcd/figs/pin_sheet.png>] (./vaman/vaman-esp/lcd/figs/vrr
-.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [4]
+(./vaman/vaman-esp/lcd/figs/vrr.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5 <./vaman/vaman-esp/lcd/figs/breadboard-eps-converted-to.pdf>])
+ [5 <./vaman/vaman-esp/lcd/figs/breadboard-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6])
+Overfull \hbox (5.68192pt too wide) in paragraph at lines 204--204
+[]\OT1/cmss/bx/n/20.74 Ohm me-ter us-ing Vaman-ESP Web Server 
+ []
+
 (./vaman/vaman-esp/webserver/main.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6]
 (./vaman/vaman-esp/webserver/figs/components.tex)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-<./vaman/vaman-esp/webserver/figs/website.jpg, id=198, 1084.05pt x 604.2575pt>
-File: ./vaman/vaman-esp/webserver/figs/website.jpg Graphic file (type jpg)
-<use ./vaman/vaman-esp/webserver/figs/website.jpg>
-Package pdftex.def Info: ./vaman/vaman-esp/webserver/figs/website.jpg  used on 
-input line 371.
-(pdftex.def)             Requested size: 433.62001pt x 241.69872pt.
-)
-(./vaman/vaman-esp/I2C/main.tex
-Underfull \vbox (badness 2111) has occurred while \output is active []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-(./vaman/vaman-esp/I2C/figs/components7.tex)
+<./vaman/vaman-esp/webserver/figs/website.jpg, id=211, 1084.05pt x 604.2575pt>
+File: ./vaman/vaman-esp/webserver/figs/website.jpg Graphic file (type jpg)
+<use ./vaman/vaman-esp/webserver/figs/website.jpg>
+Package pdftex.def Info: ./vaman/vaman-esp/webserver/figs/website.jpg  used on 
+input line 371.
+(pdftex.def)             Requested size: 433.62001pt x 241.69872pt.
+)
+Overfull \hbox (4.91559pt too wide) in paragraph at lines 206--206
+[]\OT1/cmss/bx/n/20.74 I2C Com-mu-ni-ca-tion Be-tween Vaman-ESP
+ []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-(./vaman/vaman-esp/I2C/figs/table1.tex)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-(./vaman/vaman-esp/I2C/figs/table2.tex)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+(./vaman/vaman-esp/I2C/main.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1573,22 +1576,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9 <./vaman/vaman-esp/webserver/figs/website.jpg>]
+(./vaman/vaman-esp/I2C/figs/components7.tex)
+(./vaman/vaman-esp/I2C/figs/table1.tex) (./vaman/vaman-esp/I2C/figs/table2.tex)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--378
-
- []
-
-)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
+
+ []
+
+)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1606,12 +1615,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 No file main.ind.
 (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AD46D7B9ED210182E6BFC2701E62E102;2219.
+(rerunfilecheck)             Checksum: 64565E512B68A8887C1CB10CCCDF244E;2279.
  ) 
 Here is how much of TeX's memory you used:
  45480 strings out of 478287
  1028244 string characters out of 5849289
- 1699495 words of memory out of 5000000
+ 1696495 words of memory out of 5000000
  62830 multiletter control sequences out of 15000+600000
  486346 words of font info for 94 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1631,7 +1640,7 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sfrm1095.pfb>
-Output written on main.pdf (18 pages, 2598590 bytes).
+Output written on main.pdf (18 pages, 2599408 bytes).
 PDF statistics:
  336 PDF objects out of 1000 (max. 8388607)
  275 compressed objects within 3 object streams
