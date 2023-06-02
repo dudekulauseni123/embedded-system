@@ -396,7 +396,7 @@ Connect the 5V pin of the Vaman-ESP to an extreme pin of the Breadboard shown in
 
 %
 %
-\begin{figure}
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./vaman/vaman-esp/lcd/figs/breadboard.eps}
 \caption{Breadboard}
@@ -414,7 +414,7 @@ to $V_{cc}$ and $R_2$ is connected to GND. Refer to Fig. \ref{fig:voltage_divide
 
 %
 %
-\begin{figure}
+\begin{figure}[!ht]
 \centering
 %\includegraphics[width=\columnwidth]{./figs/voltage_divider.eps}
 \resizebox {\columnwidth} {!} {
@@ -455,6 +455,38 @@ vaman/vaman-esp/lcd/codes/resistance
 %\lstinputlisting{./codes/ESP32 _LCD/src/main.cpp}
 
 \end{enumerate}
+\subsection{Displaying the Measured resistance on the website}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item Instead of LCD the unknown resistance is displayed through Vaman-ESP webserver.
+\item
+Execute the following code after editing the wifi credentials
+
+\begin{lstlisting}
+vaman/vaman-esp/lcd/webserver/codes
+\end{lstlisting}
+\item After flashing the code to vaman-ESP, the board will be connected to the wifi credentials provided.
+\item Now connect the same WiFi credentials to the mobile phone for accessing the IP address, which can be accessed by 
+\begin{lstlisting}
+ifconfig
+nmap -sn 192.168.x.x/24
+\end{lstlisting}
+\item Change the IP address in the second command accordingly with the IP address provided by first command.
+\item By the above commands the IP address of vaman-ESP will be diplayed.
+\item Now the vaman-ESP will be hosting a webserver
+\item Inorder to access the webserver type the IP address of the vaman-ESP in the web browser.
+\item In the website loaded by the IP address of vaman-ESP the Unknown resitance is displayed as shown in Fig. \ref{fig:website}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./vaman/vaman-esp/lcd/figs/website.jpg}
+\caption{Website}
+\label{fig:website}
+\end{figure}
+\end{enumerate}
+
 \subsection{Explanation}
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
