@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.5.22)  2 JUN 2023 07:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.5.22)  2 JUN 2023 10:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1416,11 +1416,11 @@ Overfull \hbox (35.66536pt too wide) in paragraph at lines 202--202
 \gnumericColC=\skip89
 )
 Package epstopdf Info: Source file: <./vaman/esp32/lcd/figs/lcd.eps>
-(epstopdf)                    date: 2023-06-01 11:35:36
+(epstopdf)                    date: 2023-06-02 10:22:26
 (epstopdf)                    size: 1088526 bytes
 (epstopdf)             Output file: <./vaman/esp32/lcd/figs/lcd-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2023-06-01 11:35:36
+(epstopdf)                    date: 2023-06-02 10:22:26
 (epstopdf)                    size: 11457 bytes
 (epstopdf)             Command: <repstopdf --outfile=./vaman/esp32/lcd/figs/lcd
 -eps-converted-to.pdf ./vaman/esp32/lcd/figs/lcd.eps>
@@ -1449,11 +1449,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package epstopdf Info: Source file: <./vaman/esp32/lcd/figs/breadboard.eps>
-(epstopdf)                    date: 2023-06-01 11:35:36
+(epstopdf)                    date: 2023-06-02 10:22:26
 (epstopdf)                    size: 2106822 bytes
 (epstopdf)             Output file: <./vaman/esp32/lcd/figs/breadboard-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2023-06-01 11:35:36
+(epstopdf)                    date: 2023-06-02 10:22:26
 (epstopdf)                    size: 115504 bytes
 (epstopdf)             Command: <repstopdf --outfile=./vaman/esp32/lcd/figs/bre
 adboard-eps-converted-to.pdf ./vaman/esp32/lcd/figs/breadboard.eps>
@@ -1570,7 +1570,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  40049 strings out of 479304
  907173 string characters out of 5869779
- 1581626 words of memory out of 5000000
+ 1581627 words of memory out of 5000000
  56424 multiletter control sequences out of 15000+600000
  420517 words of font info for 93 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
