@@ -5,10 +5,8 @@
 \contentsline {subsection}{\numberline {1.1.1}Components}{1}{subsection.1.1.1}%
 \contentsline {subsection}{\numberline {1.1.2}Setting up the Display}{2}{subsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.1.3}Measuring the resistance}{4}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Explanation}{5}{subsection.1.1.4}%
-\contentsline {section}{\numberline {1.2}Ohm meter using Vaman-ESP Web Server}{7}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Components}{7}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Measuring the resistance}{7}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}I2C Communication Between Vaman-ESP and Arduino}{10}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Components}{10}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Setting up the Master and Slave}{10}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.1.4}Displaying the Measured resistance on the website}{6}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Explanation}{7}{subsection.1.1.5}%
+\contentsline {section}{\numberline {1.2}I2C Communication Between Vaman-ESP and Arduino}{8}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Components}{8}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Setting up the Master and Slave}{8}{subsection.1.2.2}%
