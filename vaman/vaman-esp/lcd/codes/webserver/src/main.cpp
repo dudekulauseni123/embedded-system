@@ -1,11 +1,15 @@
 #include <WiFi.h>
 #include <WebServer.h>
+#include <LiquidCrystal.h>
 
-const char* ssid = "ARUN_KUMAR";
-const char* password = "arunkumar";
+const char* ssid = ".....";// edit the Wi-Fi credentials
+const char* password = "....";
 
 WebServer server(80);
 float measuredResistance = 0.0;
+
+// LCD configuration
+LiquidCrystal lcd(19, 23, 18, 17, 16, 15);
 
 void handleRoot() {
 
@@ -21,6 +25,13 @@ void handleRoot() {
   html += "</body></html>";
 
   server.send(200, "text/html", html);
+  
+// Display resistance on LCD
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Resistance:");
+  lcd.setCursor(0, 1);
+  lcd.print(measuredResistance, 2);
 }
 
 void setup() {

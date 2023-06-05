@@ -455,12 +455,13 @@ vaman/vaman-esp/lcd/codes/resistance
 %\lstinputlisting{./codes/ESP32 _LCD/src/main.cpp}
 
 \end{enumerate}
-\subsection{Displaying the Measured resistance on the website}
+\subsection{Displaying the Measured resistance on LCD and website}
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 \numberwithin{table}{enumi}
-\item Instead of LCD the unknown resistance is displayed through Vaman-ESP webserver.
+\item The unknown resistance is measured and diplayed the measured resistance on the LCD display and also on the Vaman-ESP webserver.
+\item Connect the Vaman-ESP pins to LCD pins as per Table \ref{Table:1}.
 \item
 Execute the following code after editing the wifi credentials
 
