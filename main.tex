@@ -3,7 +3,8 @@
 
 \documentclass[11pt]{book}
 \usepackage{gvv-book}
-\usepackage{gvv}       
+\usepackage{gvv} 
+\usepackage{./vaman/vaman-esp/Arduino-uart/figs/circuit}       
 %\usepackage{Wiley-AuthoringTemplate}
 \usepackage[sectionbib,authoryear]{natbib}% for name-date citation comment the below line
 %\usepackage[sectionbib,numbers]{natbib}% for numbered citation comment the above line
@@ -199,14 +200,15 @@ This book introduces Embedded Systems through using the Vaman framework.
 
 \mainmatter
 \chapter{Vaman-ESP32}
+\input{vaman/vaman-esp/Arduino-uart/main.tex}
 \section{Measuring Unknown Resistance Using Vaman-ESP}
 \input{vaman/vaman-esp/lcd/main.tex}
 \section{I2C Communication Between Vaman-ESP and Arduino}
 \input{vaman/vaman-esp/I2C/main.tex}
-\section{I2C Communication Between one Vaman-ESP and two arduinos}
-\input{vaman/vaman-esp/I2C_resistance/main.tex}
 \section{UART Communication between Vaman-ESP and Arduino}
 \input{vaman/vaman-esp/UART/main.tex}
+\section{Bluetooth Controlled Seven segment Display}
+\input{vaman/vaman-esp/bluetooth/main.tex}
 
 
 
