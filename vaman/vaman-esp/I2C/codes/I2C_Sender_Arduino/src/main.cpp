@@ -9,7 +9,7 @@ void requestEvent() {
 }
 
 void setup() {
-  Wire.begin(8);                // join i2c bus with address #0X0F
+  Wire.begin(15);                // join i2c bus with address #0X0F
   Wire.onRequest(requestEvent); // register event
 }
 
