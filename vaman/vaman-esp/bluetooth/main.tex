@@ -1,0 +1,47 @@
+\begin{abstract}
+	      This manual shows how to control the Seven Segment Display through the Dabble android application using Bluetooth in Digital mode and display on the seven segment according the controls in the android app.
+\end{abstract}
+\subsection{Components}
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+%\numberwithin{table}{enumi}
+\numberwithin{table}{section}
+
+\begin{table}[!ht]
+\centering
+\input{./vaman/vaman-esp/bluetooth/tables/components.tex}
+\caption{Components}
+\label{table:ble-components}
+\end{table}
+\subsection{Connections}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item Connect the Arduino-UART to VAMAN as per Table. \ref{tab:arduino-uart} and Figure \ref{fig:vaman/uart/1}.
+  \item Now, execute the following code
+\begin{lstlisting}
+vaman/vaman-esp/bluetooth/codes/src
+\end{lstlisting}
+\item Make sure to give the path to DabbleESP32-master folder path in the platformio.ini file as shown below
+\begin{lstlisting}
+lib_extra_dirs = /"Path to DabbleESP32-master folder"/DabbleESP32/src
+\end{lstlisting}
+\item Install the Dabble Android application and give the necessary permissions.
+\item Connect the bluetooth of vaman ESP-32 bluetooth to the mobile- where the bluetooth is labled as "ESP-32"
+\item Open the Dabble application. Select gamepad option in the app and then select Digital Mode and connect it app to ESP-32 by connecting it ESP-32 bluetooth as shown in Figure \ref{fig:ble_app}.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./vaman/vaman-esp/bluetooth/figs/ble_app.jpg}
+\caption{Dabble app Interface}
+\label{fig:ble_app}
+\end{figure}
+\item Now connect the Seven Segment to the Vaman board according to the given Table. \ref{table:ble-connections}
+\begin{table}[!ht]
+\centering
+\input{./vaman/vaman-esp/bluetooth/tables/connections.tex}
+\caption{Connections}
+\label{table:ble-connections}
+\end{table}
+\item Now you can observe the changes on sevensegment display for Start, Up, Down, Right and Left keys pressed on the Digital Mode on the android application
+\end{enumerate}

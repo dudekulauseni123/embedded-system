@@ -1,0 +1,50 @@
+\section{Flash Vaman-ESP32 using Arduino}
+
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item Make sure that Vaman board do not power any devices.  
+\item Make connections as shown in \tabref{tab:arduino-uart} and  \figref{fig:vaman/uart/1}. 
+\item The Vaman pin diagram is available in \figref{fig:vaman-pin_sheet}
+\begin{figure}[!h]
+\centering
+\input{./vaman/vaman-esp/Arduino-uart/figs/circuit.tex}
+\caption{Circuit Connections}
+\label{fig:vaman/uart/1}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{./vaman/vaman-esp/lcd/figs/pin_sheet.png}
+\caption{Vaman pins}
+\label{fig:vaman-pin_sheet}
+\end{figure}
+\begin{table}[!ht]
+\input{./vaman/vaman-esp/Arduino-uart/tables/rpi-vaman-uart.tex}
+\caption{}
+\label{tab:arduino-uart}
+\end{table}
+\item For compiling and genrating the bin file 
+\item make sure that platformio.ini file contains these lines
+\begin{lstlisting}
+[env:esp32doit-devkit-v1]
+platform = espressif32
+board = esp32doit-devkit-v1
+framework = arduino
+platform_packages =                                                               toolchain-xtensa-esp32@https://github.com/esphome/esphome-docker-base/releases/download/v1.4.0/toolchain-xtensa32.tar.gz                             
+framework-arduinoespressif32@<3.10006.210326
+\end{lstlisting}
+\item For uploading bin file to Vaman through ArduinoDroid application 
+\begin{lstlisting}[language=bash]
+1. Open the Droid Application
+2. Click the three dots in the top right corner
+3. Navigate to Settings -> Board Type
+4. Select ESP32 -> DOIT ESP32 DEVKIT V1
+5. Change the upload speed to 115200
+6. Upload the generated .bin file
+\end{lstlisting}
+\item While the dots are printed on the screen, disconnect the EN wire from GND.   Make sure that the Vaman board is not powering any device while flashing.  The Vaman-ESP should now flash.
+\item After flashing, disconnect pin 0 on Vaman-ESP from GND. Power on Vaman appropriately.
+\end{enumerate}

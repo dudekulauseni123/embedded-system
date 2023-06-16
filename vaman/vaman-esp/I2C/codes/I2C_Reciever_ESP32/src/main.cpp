@@ -6,8 +6,8 @@ LiquidCrystal lcd(19, 23, 18, 17, 16, 15);
 
 //    Can be client or even host   //
 #ifndef STASSID
-#define STASSID "....."  // Replace with your network credentials
-#define STAPSK  "....."  
+#define STASSID "ARUN_KUMAR"  // Replace with your network credentials
+#define STAPSK  "arunkumar"  
 #endif
 
 const char* ssid = STASSID;
@@ -37,7 +37,7 @@ void loop() {
 	OTAloop();
   delay(10); 
 	
-	Wire.requestFrom(8, 12);    // request 12 bytes from peripheral device #15
+	Wire.requestFrom(8, 6);    // request 12 bytes from peripheral device #15
 	lcd.setCursor(0, 0);
   // Print a message to the LCD.
   
