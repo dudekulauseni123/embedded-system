@@ -19,15 +19,15 @@
 \BOOKMARK [2][-]{subsection.1.5.1}{Components}{section.1.5}% 19
 \BOOKMARK [2][-]{subsection.1.5.2}{Connections}{section.1.5}% 20
 \BOOKMARK [0][-]{chapter.2}{Toy car}{}% 21
-\BOOKMARK [1][-]{section.2.1}{Components}{chapter.2}% 22
-\BOOKMARK [2][-]{subsection.2.1.1}{\(Vaman Board\)}{section.2.1}% 23
-\BOOKMARK [2][-]{subsection.2.1.2}{ESP 32}{section.2.1}% 24
-\BOOKMARK [2][-]{subsection.2.1.3}{DC Motors}{section.2.1}% 25
-\BOOKMARK [2][-]{subsection.2.1.4}{UGV frame/chassis}{section.2.1}% 26
-\BOOKMARK [2][-]{subsection.2.1.5}{L298 N motor driver}{section.2.1}% 27
-\BOOKMARK [2][-]{subsection.2.1.6}{Batteries for powering various equipment}{section.2.1}% 28
+\BOOKMARK [1][-]{section.2.1}{Components Table}{chapter.2}% 22
+\BOOKMARK [2][-]{subsection.2.1.1}{\(Vaman Board ESP32\)}{section.2.1}% 23
+\BOOKMARK [2][-]{subsection.2.1.2}{DC Motors}{section.2.1}% 24
+\BOOKMARK [2][-]{subsection.2.1.3}{L293 motor driver}{section.2.1}% 25
+\BOOKMARK [2][-]{subsection.2.1.4}{USB UART}{section.2.1}% 26
+\BOOKMARK [2][-]{subsection.2.1.5}{UGV frame/chassis}{section.2.1}% 27
+\BOOKMARK [2][-]{subsection.2.1.6}{Batteries for powering various equipments}{section.2.1}% 28
 \BOOKMARK [1][-]{section.2.2}{Assembling the UGV kit}{chapter.2}% 29
 \BOOKMARK [1][-]{section.2.3}{Circuit Connections}{chapter.2}% 30
-\BOOKMARK [2][-]{subsection.2.3.1}{Code: }{section.2.3}% 31
-\BOOKMARK [1][-]{section.2.4}{Execution}{chapter.2}% 32
-\BOOKMARK [1][-]{section.2.5}{Execution For WIFI UGV}{chapter.2}% 33
+\BOOKMARK [2][-]{subsection.2.3.1}{Working }{section.2.3}% 31
+\BOOKMARK [1][-]{section.2.4}{Code Execution For Wifi Toycar}{chapter.2}% 32
+\BOOKMARK [1][-]{section.2.5}{Code Execution for Bluetooth Toycar}{chapter.2}% 33
