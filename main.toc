@@ -19,16 +19,12 @@
 \contentsline {section}{\numberline {1.5}Bluetooth Controlled Seven segment Display}{15}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Components}{15}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}Connections}{15}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}wifi Controlled Seven segment Display}{17}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1} Connections }{17}{subsection.1.6.1}%
 \contentsline {chapter}{\numberline {2}Toy car}{19}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Components Table}{19}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}(Vaman Board ESP32)}{19}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}DC Motors}{20}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}L293 motor driver}{20}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}USB UART}{21}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}UGV frame/chassis}{21}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}Batteries for powering various equipments}{22}{subsection.2.1.6}%
-\contentsline {section}{\numberline {2.2}Assembling the UGV kit}{22}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Circuit Connections}{23}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Working }{25}{subsection.2.3.1}%
-\contentsline {section}{\numberline {2.4}Code Execution For Wifi Toycar}{26}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Code Execution for Bluetooth Toycar}{27}{section.2.5}%
+\contentsline {section}{\numberline {2.2}Assembling the UGV kit}{21}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Circuit Connections}{22}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Code Execution For Bluetooth Toycar}{24}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Code Execution for Integrated Bluetooth Toycar}{25}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Working }{27}{subsection.2.5.1}%
