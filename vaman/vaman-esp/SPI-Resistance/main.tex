@@ -1,0 +1,92 @@
+\begin{abstract}
+Through this manual, we will learn how to setting up the vaman-ESP as a Master and  arduinos as a Slave using SPI protocol. The  unknown resistance are measured by using Arduino and sending those  resistance value to Vaman through SPI and displaying the unkwnown Resistance on ESP-Webserver.
+\end{abstract}
+\subsection{Components}
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+%\numberwithin{table}{enumi}
+\numberwithin{table}{section}
+\begin{table}[!h]
+\centering
+\input{./vaman/vaman-esp/SPI-Resistance/figs/components.tex}
+\caption{Components}
+\label{table:SPI-components}
+\end{table}
+
+\subsection{Connections}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+	
+
+\item
+Connect the Vaman and Arduino as shown Table. \ref{Tab:SPI-Connection}.
+
+%
+\begin{table}[!ht]
+\centering
+\input{./vaman/vaman-esp/SPI-Resistance/figs/connection.tex}
+\caption{Connections}
+\label{Tab:SPI-Connection}
+\end{table}
+\item
+The Vaman pin diagram is available in Fig. \ref{fig:vaman-pin_sheet}
+
+\item Upload the following code to Arduino UNO
+
+\begin{lstlisting}
+vaman/vaman-esp/SPI-Resistance/codes/arduino
+\end{lstlisting}
+\end{enumerate}
+\subsection{Measuring the resistance}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item
+Connect the 5V pin of the Vaman-ESP to an extreme pin of the Breadboard shown in Fig. \ref{fig:breadboard}.  Let this pin be $V_{cc}$.
+\item
+Connect the GND pin of the Vaman-ESP to the opposite extreme pin of the Breadboard.
+
+%
+%
+\item
+Let $R_1$ be the known resistor and $R_2$ be the unknown resistor.  Connect $R_1$ and $R_2$ in series such that $R_1$ is connected
+to $V_{cc}$ and $R_2$ is connected to GND. Refer to Fig. \ref{fig:voltage_divider}
+\item
+Connect the junction between the two resistors to  the A0 pin on the esp32-GPIO36, which measures the  unknown resistance.
+\item
+Now Power the Vaman board
+\item
+Execute the following code after editing the wifi credentials
+\begin{lstlisting}
+vaman/vaman-esp/SPI-Resistance/codes/esp32
+\end{lstlisting}
+\end{enumerate}
+\subsection{Displaying the Measured resistance on website}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item The unknown resistance is measured and diplayed the measured resistance on the Vaman-ESP webserver.
+\item After flashing the code to vaman-ESP, the board will be connected to the wifi credentials provided.
+\item Now connect the same WiFi credentials to the mobile phone for accessing the IP address, which can be accessed by 
+\begin{lstlisting}
+ifconfig
+nmap -sn 192.168.x.x/24
+\end{lstlisting}
+\item Change the IP address in the second command accordingly with the IP address provided by first command.
+\item By the above commands the IP address of vaman-ESP will be diplayed.
+\item Now the vaman-ESP will be hosting a webserver
+\item Inorder to access the webserver type the IP address of the vaman-ESP in the web browser.
+\item In the website loaded by the IP address of vaman-ESP the Unknown resitance is displayed as shown in Fig. \ref{fig:results1}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{./vaman/vaman-esp/SPI-Resistance/figs/result.jpg}
+\caption{Website}
+\label{fig:results1}
+\end{figure}
+\end{enumerate}
