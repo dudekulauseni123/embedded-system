@@ -34,10 +34,13 @@
 \contentsline {subsection}{\numberline {1.8.2}Connections}{25}{subsection.1.8.2}%
 \contentsline {section}{\numberline {1.9}wifi Controlled Seven segment Display}{27}{section.1.9}%
 \contentsline {subsection}{\numberline {1.9.1} Connections }{27}{subsection.1.9.1}%
-\contentsline {chapter}{\numberline {2}Toy car}{29}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Components Table}{29}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Assembling the UGV kit}{31}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Circuit Connections}{32}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Code Execution For Bluetooth Toycar}{34}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Code Execution for Integrated Bluetooth Toycar}{35}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Working }{37}{subsection.2.5.1}%
+\contentsline {section}{\numberline {1.10}Integrated Bluetooth Controlled Seven segment Display}{29}{section.1.10}%
+\contentsline {subsection}{\numberline {1.10.1}Components}{29}{subsection.1.10.1}%
+\contentsline {section}{\numberline {1.11}Code execution for integrated bluetooth control seven segment display}{30}{section.1.11}%
+\contentsline {chapter}{\numberline {2}Toy car}{33}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Components Table}{33}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Assembling the UGV kit}{35}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Circuit Connections}{36}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Code Execution For Bluetooth Toycar}{38}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Code Execution for Integrated Bluetooth Toycar}{39}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Working }{41}{subsection.2.5.1}%
