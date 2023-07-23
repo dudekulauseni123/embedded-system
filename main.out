@@ -33,10 +33,13 @@
 \BOOKMARK [2][-]{subsection.1.8.2}{Connections}{section.1.8}% 33
 \BOOKMARK [1][-]{section.1.9}{wifi Controlled Seven segment Display}{chapter.1}% 34
 \BOOKMARK [2][-]{subsection.1.9.1}{ Connections }{section.1.9}% 35
-\BOOKMARK [0][-]{chapter.2}{Toy car}{}% 36
-\BOOKMARK [1][-]{section.2.1}{Components Table}{chapter.2}% 37
-\BOOKMARK [1][-]{section.2.2}{Assembling the UGV kit}{chapter.2}% 38
-\BOOKMARK [1][-]{section.2.3}{Circuit Connections}{chapter.2}% 39
-\BOOKMARK [1][-]{section.2.4}{Code Execution For Bluetooth Toycar}{chapter.2}% 40
-\BOOKMARK [1][-]{section.2.5}{Code Execution for Integrated Bluetooth Toycar}{chapter.2}% 41
-\BOOKMARK [2][-]{subsection.2.5.1}{Working }{section.2.5}% 42
+\BOOKMARK [1][-]{section.1.10}{Integrated Bluetooth Controlled Seven segment Display}{chapter.1}% 36
+\BOOKMARK [2][-]{subsection.1.10.1}{Components}{section.1.10}% 37
+\BOOKMARK [1][-]{section.1.11}{Code execution for integrated bluetooth control seven segment display}{chapter.1}% 38
+\BOOKMARK [0][-]{chapter.2}{Toy car}{}% 39
+\BOOKMARK [1][-]{section.2.1}{Components Table}{chapter.2}% 40
+\BOOKMARK [1][-]{section.2.2}{Assembling the UGV kit}{chapter.2}% 41
+\BOOKMARK [1][-]{section.2.3}{Circuit Connections}{chapter.2}% 42
+\BOOKMARK [1][-]{section.2.4}{Code Execution For Bluetooth Toycar}{chapter.2}% 43
+\BOOKMARK [1][-]{section.2.5}{Code Execution for Integrated Bluetooth Toycar}{chapter.2}% 44
+\BOOKMARK [2][-]{subsection.2.5.1}{Working }{section.2.5}% 45

@@ -18,7 +18,7 @@ Build M4
 
 From the project root dir, execute:
 
-  
+::
   
   make -C m4/GCC_Project
 
