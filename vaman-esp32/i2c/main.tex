@@ -1,0 +1,45 @@
+This section describes how to setup the Vaman-ESP32 as a Master and Arduino as a
+slave using I2C protocol.
+\subsection{Components}
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{section}
+
+\begin{table}[!ht]
+\centering
+\input{vaman-esp32/i2c/figs/components7.tex}
+\caption{Components}
+\label{table:i2c-components}
+\end{table}
+
+\subsection{Setting up the Master and Slave}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item
+Connect the vaman-ESP pins to Arduino pins as per Table \ref{Table:1 Arduino-ESP}.
+\begin{table}[!ht]
+\centering
+\input{vaman-esp32/i2c/figs/table1.tex}
+\caption{}
+\label{Table:1 Arduino-ESP}
+\end{table}
+
+\item Connect the vaman-ESP pins to LCD pins as per \ref{Table:1}.
+
+\item The Vaman pin diagram is available in Fig. \ref{fig:vaman-pin_sheet}
+
+\item
+Configure Arduino Uno as a Slave using the following PlatformIO project.
+\begin{lstlisting}
+vaman-esp32/i2c/codes/I2C_Sender_Arduino
+\end{lstlisting}
+\item
+Now configure vaman-ESP as a Master using the following PlatformIO project.
+\begin{lstlisting}
+vaman-esp32/i2c/codes/I2C_Reciever_ESP32
+\end{lstlisting}
+
+\end{enumerate}

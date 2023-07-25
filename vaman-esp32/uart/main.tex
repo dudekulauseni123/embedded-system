@@ -1,0 +1,90 @@
+This section describes how to communicate between Vaman-ESP32 and Arduino UNO 
+through UART Protocol. The Unknown resistance is measured using Arduino and 
+sending the value to Vaman through UART and displaying the unknown resistance on
+ESP32 Webserver.
+\subsection{Components}
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{section}
+
+\begin{table}[!ht]
+\centering
+\input{vaman-esp32/uart/figs/components.tex}
+\caption{Components}
+\label{table:uart-components}
+\end{table}
+
+\subsection{Connections}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item
+Connect the Vaman and Arduino as shown Table. \ref{Tab:uart-Connections}.
+
+\begin{table}[!ht]
+\centering
+\input{vaman-esp32/uart/figs/connections.tex}
+\caption{Connections}
+\label{Tab:uart-Connections}
+\end{table}
+\item
+The Vaman pin diagram is available in Fig. \ref{fig:vaman-pin_sheet}.
+
+\item Upload the following code to Arduino UNO
+
+\begin{lstlisting}
+vaman-esp32/uart/codes/UNO
+\end{lstlisting}
+\end{enumerate}
+\subsection{Measuring the resistance}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item
+Connect the 5V pin of the Vaman-ESP32 to an extreme pin of the breadboard shown 
+in Fig. \ref{fig:breadboard}. Let this pin be $V_{cc}$.
+\item
+Connect the GND pin of the Vaman-ESP32 to the opposite extreme pin of the 
+breadboard.
+\item
+Let $R_1$ be the known resistor and $R_2$ be the unknown resistor. Connect $R_1$
+and $R_2$ in series such that $R_1$ is connected to $V_{cc}$ and $R_2$ is 
+connected to GND. Refer to Fig. \ref{fig:voltage_divider}.
+\item
+Connect the junction between the two resistors to  the A0 pin on the Arduino board.
+\item
+Now power the Vaman board.
+\item
+Execute the following code after editing the WiFi credentials
+\begin{lstlisting}
+vaman-esp32/uart/codes/VAMAN
+\end{lstlisting}
+\end{enumerate}
+\subsection{Displaying the Measured resistance on website}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item The unknown resistance is measured and diplayed the measured resistance on
+the Vaman-ESP32 webserver.
+\item After flashing the code to Vaman-ESP32, the board will be connected to the
+WiFi credentials provided.
+\item Now connect the same WiFi credentials to the mobile phone for accessing 
+the IP address, which can be accessed by 
+\begin{lstlisting}
+ifconfig
+nmap -sn 192.168.x.x/24
+\end{lstlisting}
+\item Change the IP address in the second command accordingly with the IP address 
+provided by first command.
+\item By the above commands the IP address of Vaman-ESP32 will be diplayed.
+\item Now the Vaman-ESP32 will be hosting a webserver.
+\item In order to access the webserver type the IP address of the Vaman-ESP32 in
+the web browser.
+\item In the website loaded by the IP address of Vaman-ESP32 the unknown 
+resistance is displayed as shown in Fig. \ref{fig:website}.
+\end{enumerate}
