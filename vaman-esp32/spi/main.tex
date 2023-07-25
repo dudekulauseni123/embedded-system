@@ -1,0 +1,72 @@
+This section describes how to communicate between Vaman-ESP32 and Arduino UNO
+through SPI Protocol. Here the Arduino sketch for an ESP32 microcontroller that 
+connects to a WiFi network and communicates with a server using the SPI 
+protocol. It sends a message character by character to the server via the SPI 
+interface and receives a response. The received response is stored in a JSON 
+document and sent back to the server using an HTTP POST request.
+\subsection{Components}
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{section}
+
+\begin{table}[!ht]
+\centering
+\input{vaman-esp32/spi/figs/components.tex}
+\caption{Components}
+\label{table:spi-components}
+\end{table}
+
+\subsection{Connections}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item
+Connect the Vaman and Arduino as shown Table. \ref{Tab:spi-Connections}.
+
+\begin{table}[!ht]
+\centering
+\input{vaman-esp32/spi/figs/connection.tex}
+\caption{Connections}
+\label{Tab:spi-Connections}
+\end{table}
+\item The Vaman pin diagram is available in Fig. \ref{fig:vaman-pin_sheet}
+
+\item Upload the following code to Arduino UNO.
+
+\begin{lstlisting}
+vaman-esp32/spi/codes/arduino
+pio run -t upload
+\end{lstlisting}
+
+\item Execute the following code after editing the WiFi credentials
+\begin{lstlisting}
+vaman-esp32/spi/codes/esp32
+pio run -t upload 
+\end{lstlisting}
+
+\item To run the server, you require a Python 3 virtual environment with Flask
+installed. You can run it by entering the following commands at a terminal
+window
+\begin{lstlisting}
+vaman-esp32/spi/codes
+python3 -m venv venv
+source venv/bin/activate
+cd ./server
+ifconfig
+flask run --host 192.168.xxx.xxx
+\end{lstlisting}
+\item Inorder to access the webserver, type the IP address of the Vaman-ESP32 in
+the web browser.
+\item In the website loaded by the IP address of Vaman-ESP32 is to establish a 
+WiFi connection, exchange data with a server using the SPI protocol, handle 
+received data, and communicate with the server using HTTP requests as shown in 
+Fig. \ref{fig:results}.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{vaman-esp32/spi/figs/result.png}
+\caption{Website}
+\label{fig:results}
+\end{figure}
+\end{enumerate}

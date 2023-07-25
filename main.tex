@@ -4,7 +4,7 @@
 \documentclass[11pt]{book}
 \usepackage{gvv-book}
 \usepackage{gvv} 
-\usepackage{./vaman/vaman-esp/Arduino-uart/figs/circuit}       
+\usepackage{vaman-esp32/arduino-uart/figs/circuit}       
 %\usepackage{Wiley-AuthoringTemplate}
 \usepackage[sectionbib,authoryear]{natbib}% for name-date citation comment the below line
 %\usepackage[sectionbib,numbers]{natbib}% for numbered citation comment the above line
@@ -200,29 +200,35 @@ This book introduces Embedded Systems through using the Vaman framework.
 
 \mainmatter
 \chapter{Vaman-ESP32}
-\input{vaman/vaman-esp/Arduino-uart/main.tex}
-\section{Measuring Unknown Resistance Using Vaman-ESP}
-\input{vaman/vaman-esp/lcd/main.tex}
-\section{I2C Communication Between Vaman-ESP and Arduino}
-\input{vaman/vaman-esp/I2C/main.tex}
-\section{I2C Communication between Vaman-ESP and Two Arduino's}
-\input{vaman/vaman-esp/I2C_resistance/main.tex}
-\section{UART Communication between Vaman-ESP and Arduino}
-\input{vaman/vaman-esp/UART/main.tex}
-\section{SPI Communication between Vaman-ESP and Arduino}
-\input{vaman/vaman-esp/SPI/main.tex}
-\section{Measuring Unknown Resistance Using SPI Communication between Vaman-ESP and Arduino}
-\input{vaman/vaman-esp/SPI-Resistance/main.tex}
+This chapter contains various experiments that can be performed using the 
+Vaman-ESP32.
+\section{Flash Vaman-ESP32 Using Arduino}
+\input{vaman-esp32/arduino-uart/main.tex}
+\section{Measuring Unknown Resistance}
+\input{vaman-esp32/lcd/main.tex}
+\section{I2C Communication Between Vaman-ESP32 and Arduino}
+\input{vaman-esp32/i2c/main.tex}
+\section{I2C Communication between Vaman-ESP32 and Two Arduinos}
+\input{vaman-esp32/i2c-resistance/main.tex}
+\section{UART Communication between Vaman-ESP32 and Arduino}
+\input{vaman-esp32/uart/main.tex}
+\section{SPI Communication between Vaman-ESP32 and Arduino}
+\input{vaman-esp32/spi/main.tex}
+\section{Measuring Unknown Resistance Using SPI}
+\input{vaman-esp32/spi-resistance/main.tex}
+\section{Bluetooth-Controlled Seven Segment Display}
+\input{vaman-esp32/bluetooth/main.tex}
+\section{WiFi-Controlled Seven Segment Display}
+\input{vaman-esp32/wifi/main.tex}
+\chapter{Vaman-ARM}
+This chapter contains various experiments that can be performed using the 
+Vaman-ARM and Vaman-ESP32.
+\section{Integrated Bluetooth-Controlled Seven-Segment Display}
+\input{vaman-arm/bluetooth-sevenseg/main.tex}
 \section{PWM Using SPI}
-\input{vaman/vaman-esp/SPI-PWM/spi-pwm.tex}
-\section{Bluetooth Controlled Seven segment Display}
-\input{vaman/vaman-esp/bluetooth/main.tex}
-\section{wifi Controlled Seven segment Display}
-\input{vaman/vaman-esp/wifi/main.tex}
-\section{Integrated Bluetooth Controlled Seven segment Display}
-\input{vaman/vaman-esp/Integ-bluetooth-sevenseg/main.tex}
-\chapter{Toy car}
-\input{vaman/toycar/main.tex}
+\input{vaman-arm/spi-pwm/spi-pwm.tex}
+\chapter{UGV}
+\input{ugv/main.tex}
 \backmatter
 \appendix
 \iffalse
