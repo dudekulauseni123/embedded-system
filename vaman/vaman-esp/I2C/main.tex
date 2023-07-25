@@ -4,7 +4,6 @@ Through this manual, we will learn how to setting up the vaman-ESP as a Master a
 \subsection{Components}
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
-%\numberwithin{table}{enumi}
 \numberwithin{table}{section}
 
 
@@ -22,25 +21,6 @@ Through this manual, we will learn how to setting up the vaman-ESP as a Master a
 \numberwithin{figure}{enumi}
 \numberwithin{table}{enumi}
 
-%
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{./vaman/esp32/I2C/figs/lcd.eps}
-%\caption{lcd}
-%\label{fig:lcd}
-%\end{figure}
-%
-%
-%%
-%\item
-%Connect  pin 16 (Led-) of the LCD to GND.  The LCD should glow.
-%
-%%
-%\item
-%Connect pin 3 of the LCD to GND.  This is required for contrast.
-%
-
-
 \item
 Connect the vaman-ESP pins to Arduino pins as per Table \ref{Table:1 Arduino-ESP}.
 \begin{table}[h]
@@ -52,12 +32,6 @@ Connect the vaman-ESP pins to Arduino pins as per Table \ref{Table:1 Arduino-ESP
 
 \item
 Connect the vaman-ESP pins to LCD pins as per \ref{Table:1}..
-%\begin{table}[h]
-%\centering
-%\input{./vaman/vaman-esp/I2C/figs/table2.tex}
-%\caption{}
-%\label{Table:2 ESP-LCD}
-%\end{table}
 
 \item The Vaman pin diagram is available in Fig. \ref{fig:vaman-pin_sheet}
 
@@ -74,68 +48,3 @@ vaman/vaman-esp/I2C/codes/I2C_Reciever_ESP32/src/main.cpp
 \end{lstlisting}
 
 \end{enumerate}
-
-%\end{enumerate}
-%
-%\section{Display Resistance on LCD}
-%
-%\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-%\numberwithin{equation}{enumi}
-%\numberwithin{figure}{enumi}
-%\numberwithin{table}{enumi}
-
-%\begin{center}
-%\begin{tabular}{ |p{3cm}|p{3cm}|}
- %\hline
- %\multicolumn{2}{|c|}{\textbf{ESP32 to LCD Connection}} \\
- %\hline
- %\textbf{ESP32 Pins} & \textbf{LCD Pins} \\
- %\hline
- %Pin D2 & Pin D7\\
- %\hline
- %Pin D3 & Pin D6\\
- %\hline
- %Pin D4 & Pin D5\\
- %\hline
- %Pin D5 & Pin D4\\
- %\hline
- %Pin 11 & Pin 6\\
- %\hline
- %Pin 12 & Pin 4\\
- %\hline
- %GND Pin & Pin 1 and Pin 5\\
- %\hline
- %5V  Pin & Pin 2\\
- %\hline
-%\end{tabular}
-%\end{center}
-
-%
-%%
-%\item
-%The Potentiometer to LCD connection are given below: 
-%\begin{center}
-%\begin{tabular}{ |p{3cm}|p{3cm}|}
- %\hline
- %\multicolumn{2}{|c|}{\textbf{Potentiometer to LCD Connection}} \\
- %\hline
- %\textbf{Potentiometer} & \textbf{LCD Pins} \\
- %\hline
- %Middle Pin & Pin 3\\
- %\hline
- %Pin 1 & Pin 2(Vcc Pin)\\
- %\hline
- %Pin 3 & Pin 1(GND Pin)\\
- %\hline
-%\end{tabular}
-%\end{center}
-%
-%
-%
-%\item
-%The resistance is an analogue function,but the value displayed on LCD is digital function.So,we need to do analogue to digital conversion,ESP32 has built-in 10-bit analogue to digital converter.
-%Two resistors are used, one of which is known resistor value and other is unknown resistor value.
-%Take 2 resistors,one known resistor with resistance value(For e.g-1K,2K,10K),here we have taken 1K and another an unknown resistor whose value we are going to calculate.
-
-
-
