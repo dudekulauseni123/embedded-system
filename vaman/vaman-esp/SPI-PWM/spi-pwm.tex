@@ -54,8 +54,11 @@ ql_symbiflow -compile -src . -d ql-eos-s3 -t AL4S3B_FPGA_Top -v *.v -p quickfeat
 sudo apt install arp-scan
 arp-scan --localnet
     \end{lstlisting}
-    \item Then, go to the site http://<VAMAN-IP>/pwm and enter the PWM value,
-    which is an integer between 0 and 255.
+    \item Then, go to the site 
+    \begin{lstlisting}
+http://<VAMAN-IP>/pwm 
+    \end{lstlisting}
+    and enter the PWM value, which is an integer between 0 and 255.
     \item On entering the value, the brightness of the green LED will change 
     according to the PWM value.
 \end{enumerate}
