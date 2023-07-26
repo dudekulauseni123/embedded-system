@@ -40,43 +40,31 @@ extern const struct cli_cmd_entry my_main_menu[];
 
 
 const char *SOFTWARE_VERSION_STR;
+
+#define LEFT_1	23
+#define LEFT_2	22
+#define RIGHT_1	21
+#define RIGHT_2	18
+
+/*
+ * Global variable definition
+ */
+
+
 extern void qf_hardwareSetup();
 static void nvic_init(void);
+
 typedef struct{
-uint8_t shape_buttom_status[4];
-//int16_t pwm_value[4]
+	uint8_t		shape_button_status[4];	// Cross, Square, Triangle, Circle
+	int16_t		pwm_value[4];		// [0]: X pwm, [1]: Y pwm, [2] & [3]: dummy
 }dabble_joystick_t;
 
-void sevenseg(int a,int b,int c,int d,int e,int f,int g)
-{
-  digitalWrite(32, a); 
-  digitalWrite(33, b); 
-  digitalWrite(25, c); 
-  digitalWrite(26, d); 
-  digitalWrite(27, e); 
-  digitalWrite(14, f);     
-  digitalWrite(12, g); 
-}
-void _setup() 
-{
-   Serial.begin(115200);
-
-    pinMode(32, OUTPUT);  
-    pinMode(33, OUTPUT);
-    pinMode(25, OUTPUT);
-    pinMode(26, OUTPUT);
-    pinMode(27, OUTPUT);
-    pinMode(14, OUTPUT);
-    pinMode(12, OUTPUT);            
-      Dabble.begin("Esp32");
-
-}
 int main(void)
 {
     uint32_t i=0,j=0,k=0;
-    //volatile dabble_joystick_t joystick_data;  
-    //uint8_t* init_ptr = (uint8_t*)&joystick_data;
-    //int16_t* pwm_value = (int16_t*)&joystick_data.pwm_value;
+    volatile dabble_joystick_t joystick_data;  
+    uint8_t* init_ptr = (uint8_t*)&joystick_data;
+    int16_t* pwm_value = (int16_t*)&joystick_data.pwm_value;
 	
     // Data initialization
     for(i=0; i<sizeof(joystick_data); i++) init_ptr[i] = 0;
@@ -108,32 +96,38 @@ int main(void)
     while(1)
     {
         if(joystick_data.shape_button_status[0]){
-		//if(joystick_data.pwm_value[0] < 0){
-			Serial.println("0");
-                       sevenseg(0,0,0,0,0,0,1);	
+		if(joystick_data.pwm_value[0] < 0){
+			hal_fpga_onion_pwmctrl_enable(LEFT_1, 0);	
+			hal_fpga_onion_pwmctrl_enable(LEFT_2, (uint8_t)-pwm_value[0]);	
+			hal_fpga_onion_pwmctrl_enable(RIGHT_1, 0);	
+			hal_fpga_onion_pwmctrl_enable(RIGHT_2, (uint8_t)-pwm_value[0]);	
 		}
-         else if(joystick_data.shape_button_status[1]){
-		//if(joystick_data.pwm_value[0] < 0){
-			Serial.println("1");
-                       sevenseg(1,0,0,1,1,1,1);	
+		else{	
+			hal_fpga_onion_pwmctrl_enable(LEFT_1, (uint8_t)pwm_value[0]);	
+			hal_fpga_onion_pwmctrl_enable(LEFT_2, 0);	
+			hal_fpga_onion_pwmctrl_enable(RIGHT_1, (uint8_t)pwm_value[0]);	
+			hal_fpga_onion_pwmctrl_enable(RIGHT_2, 0);	
 		}
-         else if(joystick_data.shape_button_status[2]){
-		//if(joystick_data.pwm_value[0] < 0){
-			Serial.println("2");
-                       sevenseg(0,0,1,0,0,1,0);	
+	}
+	else if(joystick_data.shape_button_status[1]){
+		if(joystick_data.pwm_value[1] < 0){
+			hal_fpga_onion_pwmctrl_enable(LEFT_1, 0);	
+			hal_fpga_onion_pwmctrl_enable(LEFT_2, (uint8_t)-pwm_value[1]);	
+			hal_fpga_onion_pwmctrl_enable(RIGHT_1, (uint8_t)-pwm_value[1]);	
+			hal_fpga_onion_pwmctrl_enable(RIGHT_2, 0);	
 		}
-		 else if(joystick_data.shape_button_status[3]){
-		//if(joystick_data.pwm_value[0] < 0){
-			 Serial.println("3");
-                sevenseg(0,0,0,0,1,1,0);	
-		}				
-		else if(joystick_data.shape_button_status[4]){
-		//if(joystick_data.pwm_value[0] < 0){
-			 Serial.println("4");
-                sevenseg(1,0,0,1,1,0,0);	
+		else{	
+			hal_fpga_onion_pwmctrl_enable(LEFT_1, (uint8_t)pwm_value[1]);	
+			hal_fpga_onion_pwmctrl_enable(LEFT_2, 0);	
+			hal_fpga_onion_pwmctrl_enable(RIGHT_1, 0);	
+			hal_fpga_onion_pwmctrl_enable(RIGHT_2, (uint8_t)pwm_value[1]);	
 		}
+	}
 	else{
-		sevenseg(1,1,1,1,1,1,1);	
+		hal_fpga_onion_pwmctrl_enable(LEFT_1, 0);	
+		hal_fpga_onion_pwmctrl_enable(LEFT_2, 0);	
+		hal_fpga_onion_pwmctrl_enable(RIGHT_1, 0);	
+		hal_fpga_onion_pwmctrl_enable(RIGHT_2, 0);	
 	}
     }
     /* Start the tasks and timer running. */
