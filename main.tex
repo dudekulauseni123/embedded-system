@@ -199,51 +199,15 @@ This book introduces Embedded Systems through using the Vaman framework.
 \end{introduction}
 
 \mainmatter
-\chapter{Vaman-ESP32}
-This chapter contains various experiments that can be performed using the 
-Vaman-ESP32.
-\section{Flash Vaman-ESP32 Using Arduino}
-\input{vaman-esp32/arduino-uart/main.tex}
-\section{Measuring Unknown Resistance}
-\input{vaman-esp32/lcd/main.tex}
-\section{I2C Communication Between Vaman-ESP32 and Arduino}
-\input{vaman-esp32/i2c/main.tex}
-\section{I2C Communication between Vaman-ESP32 and Two Arduinos}
-\input{vaman-esp32/i2c-resistance/main.tex}
-\section{UART Communication between Vaman-ESP32 and Arduino}
-\input{vaman-esp32/uart/main.tex}
-\section{SPI Communication between Vaman-ESP32 and Arduino}
-\input{vaman-esp32/spi/main.tex}
-\section{Measuring Unknown Resistance Using SPI}
-\input{vaman-esp32/spi-resistance/main.tex}
-\section{Bluetooth-Controlled Seven Segment Display}
-\input{vaman-esp32/bluetooth/main.tex}
-\section{WiFi-Controlled Seven Segment Display}
-\input{vaman-esp32/wifi/main.tex}
-\chapter{Inter-Chip Communication}
-This chapter demonstrates how various platforms on the LC Vaman (ESP32, ARM,
-FPGA) can communicate with each other through various protocols such as Serial
-Peripheral Interface (SPI) and the AHB-To-Wishbone bridge on the Pygmy.
-
-\chapter{Vaman-ARM}
-This chapter contains various experiments that can be performed using the 
-Vaman-ARM and Vaman-ESP32.
-\section{Integrated Bluetooth-Controlled Seven-Segment Display}
-\input{vaman-arm/bluetooth-sevenseg/main.tex}
-\chapter{UGV}
+\input{vaman-esp32/main.tex}
+\input{inter-chip/main.tex}
 \input{ugv/main.tex}
-\chapter{Pulse Width Modulation}
-This chapter contains various experiments related to Pulse Width Modulation 
-(PWM).
-\section{PWM Using SPI}
-\input{vaman-arm/spi-pwm/spi-pwm.tex}
+\input{pwm/main.tex}
 \backmatter
 \appendix
 \iffalse
-
 \chapter{Manual}
 \input{manual/gvv_opt.tex}
-
 \fi
 \latexprintindex
 

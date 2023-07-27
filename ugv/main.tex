@@ -1,3 +1,4 @@
+\chapter{UGV}
 This chapter describes the setup of an Unmanned Ground Vehicle (UGV) and a few 
 experiments that can be performed on it with the Vaman board.
 \section{Components Table}
@@ -7,34 +8,34 @@ experiments that can be performed on it with the Vaman board.
 \numberwithin{table}{enumi}
 \begin{table}[!ht]
 \centering
-	\input{Table/components}
+	\input{ugv/tables/components}
 	\caption{components table of toycar}
 	\label{Tab:components}
 \end{table}
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.5\columnwidth]{figs/motor.png}
+\includegraphics[width=0.5\columnwidth]{ugv/figs/motor.png}
 \caption{DC motors}
 \label{fig:motor}
 \end{figure}
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.3\columnwidth]{figs/driver.jpg}
+\includegraphics[width=0.3\columnwidth]{ugv/figs/driver.jpg}
 \caption{L293 motor driver}
 \label{fig:l293}
 \end{figure}
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.5\columnwidth]{figs/base.png}
+\includegraphics[width=0.5\columnwidth]{ugv/figs/base.png}
 \caption{UGV frame/chassis}
 \label{fig:frame}
 \end{figure}
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.5\columnwidth]{figs/battery.png}
+\includegraphics[width=0.5\columnwidth]{ugv/figs/battery.png}
 \caption{Batteries for powering various equipments}
 \label{fig:battery}
 \end{figure}
@@ -45,26 +46,26 @@ experiments that can be performed on it with the Vaman board.
  
  \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.3\columnwidth]{figs/2.png}
+\includegraphics[width=0.3\columnwidth]{ugv/figs/2.png}
 \centering
 \caption{screws connecting }
 \end{figure}
  
  \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.3\columnwidth]{figs/3.png}
+\includegraphics[width=0.3\columnwidth]{ugv/figs/3.png}
 \caption{Dc motors connecting}
 \end{figure}
  \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.3\columnwidth]{figs/6.jpg}
+\includegraphics[width=0.3\columnwidth]{ugv/figs/6.jpg}
 \caption{wheels connections }
 \end{figure}
 \section{Circuit Connections}
 
 \begin{table}[!ht]
 \centering
-	\input{Table/motor}
+	\input{ugv/tables/motor}
 	\caption{DC motor connection with L293 Motor Driver }
 	\label{Tab:dcmotor}
 \end{table}
@@ -72,7 +73,7 @@ experiments that can be performed on it with the Vaman board.
 
 \begin{table}[!ht]
 \centering
-	\input{Table/table3}
+	\input{ugv/tables/table3}
 	\caption{ vaman Connections}
 	\label{Tab:connections3}
 \end{table}
@@ -81,23 +82,25 @@ experiments that can be performed on it with the Vaman board.
 \item For Bluetooth toycar connect the circuits connection as per \tabref{Tab:dcmotor} and  \tabref{Tab:connections3}.
 \begin{table}[!ht]
 \centering
-	\input{Table/table1}
+	\input{ugv/tables/table1}
 	\caption{connection with vaman board }
 	\label{Tab:connections}
 \end{table}
 \begin{table}[!ht]
 %\item Make the Motor Driver Connections as per the \tabref{Tab:connections}
 \centering
-	\input{Table/table2}
+	\input{ugv/tables/table2}
 	\caption{vaman connection with L293 Motor Driver}
 	\label{Tab:connections2}
 \end{table}
-\item For \textbf{Integrated Bluetooth toycar} connect the circuits connection as per \tabref{Tab:dcmotor} , \tabref{Tab:connections} and \tabref{Tab:connections2}.
+\item For \textbf{Integrated Bluetooth toycar} connect the circuits connection
+as per \tabref{Tab:dcmotor} , \tabref{Tab:connections} and
+\tabref{Tab:connections2}.
 
 %\item Connect the Arduino-UART pins to the Vaman ESP32 pins according to \tabref{tab:arduino-uart}.
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.3\columnwidth]{figs/8.jpg}
+\includegraphics[width=0.3\columnwidth]{ugv/figs/8.jpg}
 \caption{After all connections}
 \end{figure}
 
@@ -115,7 +118,7 @@ cd  vaman/toycar/codes/bluetooth_toycar
 pio run
 \end{lstlisting} 
 
-\item Flash ESP32 firmware ( connect Arduino-UART  )
+\item Flash ESP32 firmware (connect Arduino-UART)
 \begin{lstlisting}
 pio run -t upload
 \end{lstlisting} 
@@ -179,20 +182,20 @@ On the hardware level there are three key points: SPI,Wishbone Interfacing and A
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.5\columnwidth]{figs/block3}
+\includegraphics[width=0.5\columnwidth]{ugv/figs/block3}
 \centering
 \caption{EOS S3 Architecture }
 \end{figure}
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.5\columnwidth]{figs/block4}
+\includegraphics[width=0.5\columnwidth]{ugv/figs/block4}
 \centering
 \caption{Wishbone Slave Interface  }
 \end{figure}
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.5\columnwidth]{figs/block5}
+\includegraphics[width=0.5\columnwidth]{ugv/figs/block5}
 \centering
 \caption{Hardware Block level Architecture }
 \end{figure}

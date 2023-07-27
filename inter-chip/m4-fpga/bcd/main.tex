@@ -1,0 +1,85 @@
+\subsection{Binary-Coded Decimal Decoder}
+This subsection demonstrates the interface between the M4 subsystem and eFPGA
+subsystem on the Vaman-Pygmy by simulating a Binary-Coded Decimal (BCD) Decoder,
+otherwise known as a 7447 IC. The GPIO interface is exposed to the M4 by the
+FPGA platform.
+
+\subsubsection{Components}
+\begin{table}[!ht]
+    \centering
+    \input{inter-chip/m4-fpga/bcd/tables/components.tex}
+    \caption{Components Required for Simulating the 7447 IC.}
+    \label{tab:m4-fpga-bcd-components}
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \input{inter-chip/m4-fpga/bcd/tables/sevenseg-connections.tex}
+    \caption{Connections for interfacing the seven-segment display with Vaman-Pygmy.}
+    \label{tab:m4-fpga-bcd-sevenseg-connections}
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \input{inter-chip/m4-fpga/bcd/tables/bcd-connections.tex}
+    \caption{Equivalent Input Pins for the 7447 IC on the Vaman-Pygmy.}
+    \label{tab:m4-fpga-bcd-bcd-connections}
+\end{table}
+
+\subsubsection{Building}
+\begin{enumerate}
+    \item Build the FPGA project .bin file by entering the following commands at
+    a terminal window.
+    \begin{lstlisting}
+# The following variable can be sourced from .shellrc or .venv/bin/activate
+export QORC_SDK_PATH=/path/to/pygmy-sdk
+cd inter-chip/m4-fpga/bcd/codes/fpga
+make
+    \end{lstlisting}
+    \item On building successfully, the file
+    \begin{lstlisting}
+inter-chip/m4-fpga/bcd/codes/fpga/rtl/AL4S3B_FPGA_Top.bin
+    \end{lstlisting}
+    is generated.
+    \item Edit the variable PROJ\_ROOT in
+    \begin{lstlisting}
+inter-chip/m4-fpga/bcd/codes/m4/GCC_Project/config.mk
+    \end{lstlisting}
+    to point to the location of the pygmy-sdk folder on your system.
+    \item Build the M4 project .bin file by entering the following commands at a
+    terminal window.
+    \begin{lstlisting}
+cd inter-chip/m4-fpga/bcd/codes/m4/GCC_Project
+make -j4
+    \end{lstlisting}
+    \item On building successfully, the file
+    \begin{lstlisting}
+inter-chip/m4-fpga/bcd/codes/m4/GCC_Project/output/bin/m4.bin
+    \end{lstlisting}
+    is generated.
+    \item Flash both FPGA and M4 .bin files to the Vaman-Pygmy by resetting it
+    to bootloader mode and entering the following command at a terminal window.
+    \begin{lstlisting}
+python3 /path/to/tinyfpga-programmer-gui.py --port /dev/ttyACMxx --mode m4-fpga --m4app /path/to/m4.bin --appfpga /path/to/AL4S3B_FPGA_Top.bin --reset
+    \end{lstlisting}
+    where /dev/ttyACMxx is the port at which the Vaman board is available. This
+    can be obtained by inspecting the output of the following command (requires
+    root/sudo privileges).
+    \begin{lstlisting}
+dmesg -w
+    \end{lstlisting}
+\end{enumerate}
+
+\subsubsection{Demonstration}
+Give an input to the BCD by connecting the male ends of the jumpers at pins 10
+to 13 on the Vaman-Pygmy to high voltage or ground. The equivalent digit should
+be displayed on the seven-segment display.
+
+\subsubsection{Exercises}
+\begin{enumerate}
+    \item Create code for an incrementing encoder instead of a display decoder
+    as demonstrated in this subsection.
+    \item Extend the code to perform mathematical operations modulo 10 and
+    display the result. Use two sets of four inputs.
+    \item Extend the code to accommodate hexadecimal digits.
+\end{enumerate}
