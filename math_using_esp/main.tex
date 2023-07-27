@@ -1,0 +1,140 @@
+\begin{abstract}\\
+Through this manual, we will learn how to compute math problem using esp.
+\end{abstract}
+
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+
+	\item Show that the points A $\myvec{1\\-2\\-8}$, B $\myvec{5\\0\\-2}$ and C $\myvec{11\\3\\7}$ are collinear, and find the ratio in which B divides AC.\\
+
+
+\solution \\The input parameters for this problem are available in Table \ref{Table-1}
+\begin{table}[ht!]
+\input{./math_using_esp/tables/table.tex}
+\caption{}
+\label{Table-1}	
+
+\end{table}
+
+		Points $\vec{A}$, $\vec{B}$ and $\vec{C}$ are on a line if
+    \begin{align}
+        \textrm{rank}\myvec{\vec{A} & \vec{B} & \vec{C}} < 3
+        \label{eq:chapters/12/10/5/8rank-collinear}
+    \end{align}
+    Substituting, we must find the rank of
+    \begin{align}
+        \vec{M} = \myvec{1&5&11\\-2&0&3\\-8&-2&7}
+    \end{align}
+    Using row reduction methods to bring $\vec{M}$ into row-reduced echelon form,
+    \begin{align}
+        \myvec{1&5&11\\-2&0&3\\-8&-2&7}&\xleftrightarrow[]{R_2\rightarrow R_2+2R_1}
+        \myvec{1&5&11\\0&10&25\\-8&-2&7} \\
+                &\xleftrightarrow[]{R_3\rightarrow R_3+8R_1}\myvec{1&5&11\\0&10&25\\0&38&95} \\
+                &\xleftrightarrow[]{R_3\rightarrow R_3-\frac{19}{5}R_2}\myvec{1&5&11\\0&10&25\\0&0&0}
+                \label{eq:chapters/12/10/5/8row-red}
+    \end{align}
+    Clearly, the rank of $\vec{M}$ is 2, and hence the given points are 
+    collinear. 
+    Fig. \ref{fig:Fig1}  verifies that the three points are indeed 
+    collinear as claimed.\\
+	Let $\vec{B}$ divide $\vec{AC}$ in k:1 then,
+	\begin{align}
+		\frac{k\vec{C}+\vec{A}}{k+1} = \vec{B}
+	\end{align}
+		\begin{align}
+			\implies k\vec{C}+\vec{A}=\vec{B}\brak{k+1}
+			\implies k\brak{\vec{C}-\vec{B}}=\brak{\vec{B}-\vec{A}}
+		\end{align}
+			Multiplying with $\brak{\vec{C}-\vec{B}}^{\top}$ on both sides,\\
+	
+		\begin{align*}
+			 k\brak{\vec{C}-\vec{B}}\brak{\vec{C}-\vec{B}}^{\top}=\brak{\vec{B}-\vec{A}}{\vec{C}-\vec{B}}^{\top}
+		\end{align*}
+			The value of k is as follows,
+			\begin{align}
+			k &=
+			\frac{\brak{\vec{B}-\vec{A}}\brak{\vec{C}-\vec{B}}^{\top}}{\norm{\vec{C-B}}^2}
+			\end{align}
+			where,
+			\begin{align}
+				\brak{\vec{B-A}} &=
+				\brak{\myvec{5\\0\\-2}-\myvec{1\\-2\\-8}} =
+				\myvec{4\\2\\6}
+			\end{align}
+			
+			\begin{align}
+				\brak{\vec{C-B}} &=
+				\brak{\myvec{11\\3\\7}-\myvec{5\\0\\-2}} =
+				\myvec{6\\3\\9}
+			\end{align}
+			\begin{align*}
+				\brak{\vec{C}-\vec{B}}^{\top} &=
+				\myvec{6 & 3 & 9}
+			\end{align*}
+			Substituting the values the value of $k$ is $2/3$.
+			\\    Hence, $\vec{B}$ divides $\vec{AC}$ in the ratio $2:3$.
+	\begin{figure}[!h]
+		\begin{center}
+			\includegraphics[width=\columnwidth]{./math_using_esp/figs/line_3d.png}
+		\end{center}
+		\caption{}
+		\label{fig:Fig1}
+	\end{figure}
+\end{enumerate}
+
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]	
+\subsection{C pointer code}
+\item The following is the C code for the above question using pointers
+\begin{lstlisting}
+vaman/vaman-esp/math_using_esp/codes/cprog/main.c
+\end{lstlisting}
+\end{enumerate}
+
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\section{Code execution for Math Computing using esp32}
+\raggedright
+\item Now, Execute the following code
+\begin{lstlisting}
+math_using_esp/codes/esp_code/src/main.cpp
+\end{lstlisting}
+\item Build the ESP32 firmware
+\begin{lstlisting}
+cd  math_using_esp/codes/esp_code
+pio run
+\end{lstlisting} 
+\item Flash ESP32 firmware ( using Arduino  )
+\begin{lstlisting}
+pio run -t upload
+\end{lstlisting} 
+\end{enumerate}
+
+\subsection{Displaying the output  on website}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\item The output of the code i.e; if the points are collinear or not will be displayed in the webserver.
+\item After flashing the code to vaman-ESP, the board will be connected to the wifi credentials provided.
+\item Now connect the same WiFi credentials to the mobile phone for accessing the IP address, which can be accessed by 
+\begin{lstlisting}
+ifconfig
+nmap -sn 192.168.x.x/24
+\end{lstlisting}
+\item Change the IP address in the second command accordingly with the IP address provided by first command.
+\item By the above commands the IP address of vaman-ESP will be diplayed.
+\item Now the vaman-ESP will be hosting a webserver
+\item In order to access the webserver type the IP address of the vaman-ESP in the web browser.
+\item In the website loaded by the IP address of vaman-ESP the output is displayed as shown in Fig. \ref{fig:results of collinear}
+\begin{figure}[H]
+\centering
+\includegraphics[scale =0.3]{./math_using_esp/figs/1.jpg}
+\caption{Website}
+\label{fig:results of collinear}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{./math_using_esp/figs/2.jpg}
+\caption{Website result}
+\label{fig:results of collinear equations }
+\end{figure}
+
+\end{enumerate}
+
+
