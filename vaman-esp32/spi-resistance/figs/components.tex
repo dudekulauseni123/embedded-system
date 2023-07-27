@@ -149,7 +149,7 @@
 \ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{60pt*\gnumericScale}@{}}x\end{tabular}}
 \ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{65pt*\gnumericScale}@{}}x\end{tabular}}
 
-\begin{longtable}[c]{%
+\begin{tabular}[c]{%
 	b{\gnumericColA}%
 	b{\gnumericColB}%
 	b{\gnumericColC}%
@@ -202,7 +202,7 @@
 	 \multirow{2}[1]{\gnumericMultiRowLength}{\parbox{\gnumericMultiRowLength}{%
 	 \gnumericPB{\centering}Resistor}}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}unknown  Ohm}
+	{\gnumericPB{\centering}220 Ohm}
 	&\multicolumn{1}{p{\gnumericColC}|}%
 	{\gnumericPB{\centering}1}
 \\
@@ -247,7 +247,7 @@
 	{\gnumericPB{\centering}\gnumbox{1}}
 \\
 \hhline{|-|-|-|}
-\end{longtable}
+\end{tabular}
 
 \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{\languagename}}
 \gnumericTableEnd

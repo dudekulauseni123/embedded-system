@@ -149,7 +149,7 @@
 \ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{55pt*\gnumericScale}@{}}x\end{tabular}}
 \ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{75pt*\gnumericScale}@{}}x\end{tabular}}
 
-\begin{longtable}[c]{%
+\begin{tabular}[c]{%
 	b{\gnumericColA}%
 	b{\gnumericColB}%
 	b{\gnumericColC}%
@@ -201,7 +201,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedleft}\gnumbox[r]{1\hspace{1cm}}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedleft}\gnumbox[r]{\figref{fig:vaman-pin_sheet}}}
+	{\gnumericPB{\raggedleft}\gnumbox[r]{\autoref{fig:vaman-pin_sheet}}}
 \\
 \hhline{|---|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
@@ -209,7 +209,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedleft}\gnumbox[r]{1\hspace{1cm}}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedleft}\gnumbox[r]{\figref{fig:vaman/uart/1}}}
+	{\gnumericPB{\raggedleft}\gnumbox[r]{\autoref{fig:vaman/uart/1}}}
 \\
 \hhline{|---|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
@@ -217,7 +217,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedleft}\gnumbox[r]{1\hspace{1cm}}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedleft}\gnumbox[r]{\figref{fig:frame}}}
+	{\gnumericPB{\raggedleft}\gnumbox[r]{\autoref{fig:frame}}}
 \\
 \hhline{|---|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
@@ -225,7 +225,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedleft}\gnumbox[r]{1\hspace{1cm}}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedleft}\gnumbox[r]{\figref{fig:l293}}}
+	{\gnumericPB{\raggedleft}\gnumbox[r]{\autoref{fig:l293}}}
 \\
 \hhline{|---|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
@@ -233,7 +233,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedleft}\gnumbox[r]{2\hspace{1cm}}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedleft}\gnumbox[r]{\figref{fig:motor}}}
+	{\gnumericPB{\raggedleft}\gnumbox[r]{\autoref{fig:motor}}}
 \\
 \hhline{|---|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
@@ -241,7 +241,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedleft}\gnumbox[r]{4\hspace{1cm}}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedleft}\gnumbox[r]{\figref{fig:battery}}}
+	{\gnumericPB{\raggedleft}\gnumbox[r]{\autoref{fig:battery}}}
 \\
 \hhline{|---|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
@@ -257,10 +257,10 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedleft}\gnumbox[r]{1\hspace{1cm}}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedleft}\gnumbox[r]{\figref{fig:breadboard}}}
+	{\gnumericPB{\raggedleft}\gnumbox[r]{\autoref{fig:breadboard}}}
 \\
 \hhline{|-|-|-|}
-\end{longtable}
+\end{tabular}
 
 \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{\languagename}}
 \gnumericTableEnd

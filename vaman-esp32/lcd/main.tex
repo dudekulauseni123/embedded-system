@@ -1,11 +1,7 @@
 \section{Measuring Unknown Resistance}
-This section describes how to measure an unknown resistance through Vaman-ESP32 
+This section describes how to measure an unknown resistance through Vaman-ESP32
 and display it on an LCD.
 \subsection{Components}
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{section}
-
 \begin{table}[!ht]
 \centering
 \input{vaman-esp32/lcd/figs/components.tex}
@@ -14,13 +10,9 @@ and display it on an LCD.
 \end{table}
 
 \subsection{Setting up the Display}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
-
+\begin{enumerate}
 \item
-Plug the LCD in Fig. \ref{fig:lcd} to the breadboard.
+Plug the LCD in \autoref{fig:lcd} to the breadboard.
 
 \begin{figure}
 \centering
@@ -29,9 +21,10 @@ Plug the LCD in Fig. \ref{fig:lcd} to the breadboard.
 \label{fig:lcd}
 \end{figure}
 \item
-Connect the Vaman-ESP pins to LCD pins as per Table \ref{Table:1}. Make sure that all 5V sources are connected to the LCD through a 220 $\Omega$ resistance.
+Connect the Vaman-ESP pins to LCD pins as per \autoref{Table:1}. Make sure that
+all 5V sources are connected to the LCD through a 220 $\Omega$ resistance.
 \item
-The Vaman pin diagram is available in Fig. \ref{fig:vaman-pin_sheet}
+The Vaman pin diagram is available in \autoref{fig:vaman-pin_sheet}.
 \begin{table}[!ht]
 \centering
 \input{vaman-esp32/lcd/figs/table1.tex}
@@ -51,13 +44,10 @@ This is CSP Lab
 \item Modify the above code to display your name.
 \end{enumerate}
 \subsection{Measuring the resistance}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
+\begin{enumerate}
 
-\item Connect the 5V pin of the Vaman-ESP32 to an extreme pin of the Breadboard 
-shown in Fig. \ref{fig:breadboard}. Let this pin be $V_{cc}$.
+\item Connect the 5V pin of the Vaman-ESP32 to an extreme pin of the Breadboard
+shown in \autoref{fig:breadboard}. Let this pin be $V_{cc}$.
 
 \begin{figure}[!ht]
 \centering
@@ -67,12 +57,14 @@ shown in Fig. \ref{fig:breadboard}. Let this pin be $V_{cc}$.
 \end{figure}
 %
 \item
-Connect the GND pin of the Vaman-ESP to the opposite extreme pin of the Breadboard.
+Connect the GND pin of the Vaman-ESP to the opposite extreme pin of the
+Breadboard.
 
 %
 \item
-Let $R_1$ be the known resistor and $R_2$ be the unknown resistor.  Connect $R_1$ and $R_2$ in series such that $R_1$ is connected
-to $V_{cc}$ and $R_2$ is connected to GND. Refer to Fig. \ref{fig:voltage_divider}
+Let $R_1$ be the known resistor and $R_2$ be the unknown resistor.  Connect
+$R_1$ and $R_2$ in series such that $R_1$ is connected to $V_{cc}$ and $R_2$ is
+connected to GND. Refer to \autoref{fig:voltage_divider}.
 
 %
 \begin{figure}[!ht]
@@ -85,7 +77,8 @@ to $V_{cc}$ and $R_2$ is connected to GND. Refer to Fig. \ref{fig:voltage_divide
 \end{figure}
 %
 \item
-Connect the junction between the two resistors to  the GPIO34 pin on the Vaman-ESP.
+Connect the junction between the two resistors to  the GPIO34 pin on the
+Vaman-ESP32.
 
 %
 \item
@@ -99,29 +92,32 @@ vaman/vaman-esp/lcd/codes/resistance
 
 \end{enumerate}
 \subsection{Displaying the Measured resistance on LCD and website}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
-\item The unknown resistance is measured and diplayed the measured resistance on the LCD display and also on the Vaman-ESP webserver.
-\item Connect the Vaman-ESP pins to LCD pins as per Table \ref{Table:1}.
+\begin{enumerate}
+\item The unknown resistance is measured and diplayed the measured resistance on
+the LCD display and also on the Vaman-ESP webserver.
+\item Connect the Vaman-ESP pins to LCD pins as per \autoref{Table:1}.
 \item
 Execute the following code after editing the wifi credentials
 
 \begin{lstlisting}
-vaman/vaman-esp/lcd/webserver/codes
+vaman-esp/lcd/webserver/codes
 \end{lstlisting}
-\item After flashing the code to vaman-ESP, the board will be connected to the wifi credentials provided.
-\item Now connect the same WiFi credentials to the mobile phone for accessing the IP address, which can be accessed by 
+\item After flashing the code to vaman-ESP, the board will be connected to the
+wifi credentials provided.
+\item Now connect the same WiFi credentials to the mobile phone for accessing
+the IP address, which can be accessed by 
 \begin{lstlisting}
 ifconfig
 nmap -sn 192.168.x.x/24
 \end{lstlisting}
-\item Change the IP address in the second command accordingly with the IP address provided by first command.
+\item Change the IP address in the second command accordingly with the IP
+address provided by first command.
 \item By the above commands the IP address of vaman-ESP will be diplayed.
 \item Now the vaman-ESP will be hosting a webserver
-\item Inorder to access the webserver type the IP address of the vaman-ESP in the web browser.
-\item In the website loaded by the IP address of vaman-ESP the Unknown resitance is displayed as shown in Fig. \ref{fig:website}
+\item Inorder to access the webserver type the IP address of the vaman-ESP in
+the web browser.
+\item In the website loaded by the IP address of vaman-ESP the Unknown resitance
+is displayed as shown in \autoref{fig:website}
 
 \begin{figure}[!ht]
 \centering
@@ -132,10 +128,7 @@ nmap -sn 192.168.x.x/24
 \end{enumerate}
 
 \subsection{Explanation}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
+\begin{enumerate}
 
 \item We create a variable called analogPin and assign it to 0. This is because 
 the voltage value we are going to read is connected to analogPin GPIO34.
@@ -149,14 +142,12 @@ that practically all 5 volts falls across the unknown resistor.
 \item  $V_{out}$ represents the divided voltage that falls across the unknown 
 resistor.
 
-\item  The Ohm meter in this manual works on the principle of the voltage 
-divider shown in Fig. \ref{fig:voltage_divider}.
-%
+\item  The Ohm meter in this manual works on the principle of the voltage
+divider shown in \autoref{fig:voltage_divider}.
 \begin{align}
 V_{out}&=\frac{R_1}{R_1+R_2}V_{in} \\
 \Rightarrow R_2&=R_1\brak{\frac{V_{in}}{V_{out}}-1}
 \end{align}
-%
 In the above, $V_{in} = 5$V, $R_1 = 220 \Omega$.
 \item Repeat the exercise with another unknown resistance.
 \end{enumerate}

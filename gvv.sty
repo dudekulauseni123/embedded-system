@@ -104,8 +104,9 @@ columns=fullflexible
 %\numberwithin{equation}{subsection}
 %\numberwithin{problem}{section}
 %\numberwithin{definition}{section}
+\renewcommand{\theenumi}{\thesubsection.\arabic{enumi}}
 %\makeatletter
-%\@addtoreset{figure}{problem}
+%\@addtoreset{enumi}{subsection}
 %\makeatother
 
 %\let\StandardTheFigure\thefigure

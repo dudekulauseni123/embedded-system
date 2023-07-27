@@ -1,9 +1,6 @@
 \section{Measuring Unknown Resistance Using SPI}
 This section describes how to setup the Vaman-ESP32 as a Master and  arduinos as a Slave using SPI protocol. The  unknown resistance are measured by using Arduino and sending those  resistance value to Vaman through SPI and displaying the unkwnown Resistance on ESP-Webserver.
 \subsection{Components}
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{section}
 \begin{table}[!ht]
 \centering
 \input{vaman-esp32/spi-resistance/figs/components.tex}
@@ -12,22 +9,18 @@ This section describes how to setup the Vaman-ESP32 as a Master and  arduinos as
 \end{table}
 
 \subsection{Connections}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
-
+\begin{enumerate}
 \item
-Connect the Vaman and Arduino as shown Table. \ref{Tab:SPI-Connection}.
+Connect the Vaman and Arduino as shown \autoref{Tab:SPI-Connection}.
 
 \begin{table}[!ht]
 \centering
-\input{vaman-esp32/spi-resistance/figs/connection.tex}
+\input{vaman-esp32/spi-resistance/figs/connections.tex}
 \caption{Connections}
 \label{Tab:SPI-Connection}
 \end{table}
 \item
-The Vaman pin diagram is available in Fig. \ref{fig:vaman-pin_sheet}.
+The Vaman pin diagram is available in \autoref{fig:vaman-pin_sheet}.
 
 \item Upload the following code to Arduino UNO.
 \begin{lstlisting}
@@ -35,21 +28,17 @@ vaman-esp32/spi-resistance/codes/arduino
 \end{lstlisting}
 \end{enumerate}
 \subsection{Measuring the resistance}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
-
+\begin{enumerate}
 \item
 Connect the 5V pin of the Vaman-ESP32 to an extreme pin of the breadboard shown 
-in Fig. \ref{fig:breadboard}. Let this pin be $V_{cc}$.
+in \autoref{fig:breadboard}. Let this pin be $V_{cc}$.
 \item
 Connect the GND pin of the Vaman-ESP32 to the opposite extreme pin of the 
 breadboard.
 \item
 Let $R_1$ be the known resistor and $R_2$ be the unknown resistor. Connect $R_1$
 and $R_2$ in series such that $R_1$ is connected to $V_{cc}$ and $R_2$ is 
-connected to GND. Refer to Fig. \ref{fig:voltage_divider}.
+connected to GND. Refer to \autoref{fig:voltage_divider}.
 \item
 Connect the junction between the two resistors to the A0 pin on the Vaman-ESP32 
 GPIO36, which measures the unknown resistance.
@@ -62,10 +51,7 @@ vaman-esp32/spi-resistance/codes/esp32
 \end{lstlisting}
 \end{enumerate}
 \subsection{Displaying the Measured resistance on website}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
+\begin{enumerate}
 \item The unknown resistance is measured and diplayed the measured resistance on
 the Vaman-ESP32 webserver.
 \item After flashing the code to Vaman-ESP32, the board will be connected to the
@@ -83,7 +69,7 @@ address provided by first command.
 \item In order to access the webserver type the IP address of the Vaman-ESP32 in
 the web browser.
 \item In the website loaded by the IP address of Vaman-ESP32, the unknown 
-resistance is displayed as shown in Fig. \ref{fig:results1}.
+resistance is displayed as shown in \autoref{fig:results1}.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{vaman-esp32/spi-resistance/figs/result.jpg}

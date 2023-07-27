@@ -2,10 +2,6 @@
 This chapter describes the setup of an Unmanned Ground Vehicle (UGV) and a few 
 experiments that can be performed on it with the Vaman board.
 \section{Components Table}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
 \begin{table}[!ht]
 \centering
 	\input{ugv/tables/components}
@@ -42,7 +38,7 @@ experiments that can be performed on it with the Vaman board.
 
 \section{Assembling the UGV kit}
 
-\item Assemble the Chassis using the provided nuts/screws, Wheels, and parts. 
+Assemble the Chassis using the provided nuts/screws, Wheels, and parts. 
  
  \begin{figure}[!ht]
 \centering
@@ -69,7 +65,7 @@ experiments that can be performed on it with the Vaman board.
 	\caption{DC motor connection with L293 Motor Driver }
 	\label{Tab:dcmotor}
 \end{table}
-%\item  Make the Circuit Connections as per the  \tabref{Tab:dcmotor}
+%\item  Make the Circuit Connections as per the  \autoref{Tab:dcmotor}
 
 \begin{table}[!ht]
 \centering
@@ -77,9 +73,10 @@ experiments that can be performed on it with the Vaman board.
 	\caption{ vaman Connections}
 	\label{Tab:connections3}
 \end{table}
-%\item Make the Circuit Connections as per the \tabref{Tab:connections3}.
-\item Connect the Arduino-UART pins to the Vaman ESP32 pins according to \tabref{tab:arduino-uart}.
-\item For Bluetooth toycar connect the circuits connection as per \tabref{Tab:dcmotor} and  \tabref{Tab:connections3}.
+%\item Make the Circuit Connections as per the \autoref{Tab:connections3}.
+\begin{enumerate}
+\item Connect the Arduino-UART pins to the Vaman ESP32 pins according to \autoref{tab:arduino-uart}.
+\item For Bluetooth toycar connect the circuits connection as per \autoref{Tab:dcmotor} and  \autoref{Tab:connections3}.
 \begin{table}[!ht]
 \centering
 	\input{ugv/tables/table1}
@@ -87,26 +84,26 @@ experiments that can be performed on it with the Vaman board.
 	\label{Tab:connections}
 \end{table}
 \begin{table}[!ht]
-%\item Make the Motor Driver Connections as per the \tabref{Tab:connections}
+%\item Make the Motor Driver Connections as per the \autoref{Tab:connections}
 \centering
 	\input{ugv/tables/table2}
 	\caption{vaman connection with L293 Motor Driver}
 	\label{Tab:connections2}
 \end{table}
 \item For \textbf{Integrated Bluetooth toycar} connect the circuits connection
-as per \tabref{Tab:dcmotor} , \tabref{Tab:connections} and
-\tabref{Tab:connections2}.
+as per \autoref{Tab:dcmotor} , \autoref{Tab:connections} and
+\autoref{Tab:connections2}.
 
-%\item Connect the Arduino-UART pins to the Vaman ESP32 pins according to \tabref{tab:arduino-uart}.
+%\item Connect the Arduino-UART pins to the Vaman ESP32 pins according to \autoref{tab:arduino-uart}.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.3\columnwidth]{ugv/figs/8.jpg}
 \caption{After all connections}
 \end{figure}
+\end{enumerate}
 
 \section{Code Execution For Bluetooth Toycar}
-\raggedright
-
+\begin{enumerate}[resume]
 \item Now,Execute the following code
 \begin{lstlisting}
 vaman/toycar/codes/bluetooth_toycar/src
@@ -122,10 +119,11 @@ pio run
 \begin{lstlisting}
 pio run -t upload
 \end{lstlisting} 
-\item Install the \textbf{Dabble app} on the Mobile from the \textbf{Playstore}. Connect it to the \textbf{ESP32} on the Vaman Board using \textbf{Bluetooth}. Change the controls to \textbf{Joystick mode} as shown in \figref{fig:ble_app}to navigate the UGV.\\
+\item Install the \textbf{Dabble app} on the Mobile from the \textbf{Playstore}. Connect it to the \textbf{ESP32} on the Vaman Board using \textbf{Bluetooth}. Change the controls to \textbf{Joystick mode} as shown in \autoref{fig:ble_app}to navigate the UGV.\\
+\end{enumerate}
 
 \section{Code Execution for Integrated Bluetooth Toycar}
-\raggedright
+\begin{enumerate}[resume]
 \item Now,Execute the following code 
 
 \begin{lstlisting}
@@ -175,7 +173,11 @@ scp AL4S3B_FPGA_Top.bin username@IPaddress:
 sudo python3 <Type path to tiny fpga programmer application> --port /dev/ttyACM0  --appfpga AL4S3B_FPGA_Top.bin --m4app m4_pwmctrl.bin --mode m4-fpga --reset
 \end{lstlisting} 
 
-\item Install the \textbf{Dabble app} on the Mobile from the \textbf{Playstore}. Connect it to the \textbf{ESP32} on the Vaman Board using \textbf{Bluetooth}. Change the controls to \textbf{Joystick mode} as shown in \figref{fig:ble_app}to navigate the UGV.\\
+\item Install the \textbf{Dabble app} on the Mobile from the \textbf{Playstore}.
+Connect it to the \textbf{ESP32} on the Vaman Board using \textbf{Bluetooth}.
+Change the controls to \textbf{Joystick mode} as shown in
+\autoref{fig:ble_app} to navigate the UGV.
+\end{enumerate}
 \subsection{Working }
 On the hardware level there are three key points: SPI,Wishbone Interfacing and Address Mapping. Vaman Board, we have an EOS S3 and ESP32. The Communication between these two happens via Serial Peripheral Interface(SPI).\\
 \vspace{0.25cm}
@@ -199,5 +201,3 @@ On the hardware level there are three key points: SPI,Wishbone Interfacing and A
 \centering
 \caption{Hardware Block level Architecture }
 \end{figure}
-
-\end{enumerate}

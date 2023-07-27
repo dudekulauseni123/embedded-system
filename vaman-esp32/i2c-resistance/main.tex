@@ -1,12 +1,9 @@
 \section{I2C Communication between Vaman-ESP32 and Two Arduinos}
 This section describes how to setup the Vaman-ESP32 as a master and two Arduinos
-as a slave using I2C protocol. The two unknown resistances are measured by 
-using two Arduinos and sending those two resistance values to Vaman-ESP32 
-through I2C and displaying the unkwnown resistances on ESP32 webserver.
+as a slave using I2C protocol. The two unknown resistances are measured by using
+two Arduinos and sending those two resistance values to Vaman-ESP32 through I2C
+and displaying the unkwnown resistances on ESP32 webserver.
 \subsection{Components}
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{section}
 \begin{table}[!ht]
 \centering
 \input{vaman-esp32/i2c-resistance/figs/components7.tex}
@@ -14,19 +11,17 @@ through I2C and displaying the unkwnown resistances on ESP32 webserver.
 \label{table:}
 \end{table}
 \subsection{Setting up one Master and two slaves}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
+\begin{enumerate}
 \item
-Connect the vaman-ESP pins to Arduino pins as per Table \ref{Table:1 vamanesp32-arduino}.
+Connect the vaman-ESP pins to Arduino pins as per \autoref{Table:1
+vamanesp32-arduino}.
 \begin{table}[!ht]
 \centering
 \input{vaman-esp32/i2c-resistance/figs/table1.tex}
 \caption{}
 \label{Table:1 vamanesp32-arduino}
 \end{table}
-\item The Vaman pin diagram is available in Fig. \ref{fig:vaman-pin_sheet}
+\item The Vaman pin diagram is available in \autoref{fig:vaman-pin_sheet}
 \item
 Configure Arduino Uno as a Slave-1 using the following PlatformIO and upload it.
 \begin{lstlisting}
@@ -46,21 +41,18 @@ vaman-esp32/i2c-resistance/codes/I2C_Reciever_ESP32
 \end{lstlisting}
 \end{enumerate}
 \subsection{Measuring the resistance}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
+\begin{enumerate}
 
 \item
 Connect the 5V pin of the Vaman-ESP32 to an extreme pin of the breadboard shown 
-in Fig. \ref{fig:breadboard}.  Let this pin be $V_{cc}$.
+in \autoref{fig:breadboard}.  Let this pin be $V_{cc}$.
 \item
 Connect the GND pin of the Vaman-ESP32 to the opposite extreme pin of the 
 Breadboard.
 \item
 Let $R_1$ be the known resistor of 1k ohm and $R_2$ be the unknown resistor. 
 Connect $R_1$ and $R_2$ in series such that $R_1$ is connected to $V_{cc}$ and 
-$R_2$ is connected to GND. Refer to Fig. \ref{fig:voltage_divider}.
+$R_2$ is connected to GND. Refer to \autoref{fig:voltage_divider}.
 \item
 Connect the junction between the two resistors to the A0 pin on the Arduino 
 board 1, which measures the first unknown resistance.
@@ -76,10 +68,7 @@ vaman-esp32/i2c-resistance/codes/I2C_Reciever_ESP32
 \end{lstlisting}
 \end{enumerate}
 \subsection{Displaying the Measured resistance on website}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
+\begin{enumerate}
 \item The two unknown resistances are measured and diplayed the measured 
 resistance on the Vaman-ESP32 webserver.
 \item After flashing the code to Vaman-ESP32, the board will be connected to the
@@ -97,7 +86,7 @@ address provided by first command.
 \item Inorder to access the webserver type the IP address of the Vaman-ESP32 in 
 the web browser.
 \item In the website loaded by the IP address of Vaman-ESP32 the two unknown 
-resitances are displayed as shown in Fig. \ref{fig:website_results}.
+resitances are displayed as shown in \autoref{fig:website_results}.
 \end{enumerate}
 
 \begin{figure}[!ht]
