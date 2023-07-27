@@ -12,10 +12,11 @@ FPGA platform.
     \label{tab:m4-fpga-bcd-components}
 \end{table}
 
+\subsubsection{Connections}
 \begin{table}[!ht]
     \centering
     \input{inter-chip/m4-fpga/bcd/tables/sevenseg-connections.tex}
-    \caption{Connections for interfacing the seven-segment display with Vaman-Pygmy.}
+    \caption{Connections for Interfacing the Seven-Segment Display with Vaman-Pygmy.}
     \label{tab:m4-fpga-bcd-sevenseg-connections}
 \end{table}
 
@@ -36,29 +37,27 @@ export QORC_SDK_PATH=/path/to/pygmy-sdk
 cd inter-chip/m4-fpga/bcd/codes/fpga
 make
     \end{lstlisting}
-    \item On building successfully, the file
+    \item On building successfully, the .bin file is generated at
     \begin{lstlisting}
 inter-chip/m4-fpga/bcd/codes/fpga/rtl/AL4S3B_FPGA_Top.bin
     \end{lstlisting}
-    is generated.
-    \item Edit the variable PROJ\_ROOT in
+    \item Edit the variable PROJ\_ROOT to point to the location of the pygmy-sdk
+    folder on your system in the file
     \begin{lstlisting}
 inter-chip/m4-fpga/bcd/codes/m4/GCC_Project/config.mk
     \end{lstlisting}
-    to point to the location of the pygmy-sdk folder on your system.
     \item Build the M4 project .bin file by entering the following commands at a
     terminal window.
     \begin{lstlisting}
 cd inter-chip/m4-fpga/bcd/codes/m4/GCC_Project
 make -j4
     \end{lstlisting}
-    \item On building successfully, the file
+    \item On building successfully, the .bin file is generated at
     \begin{lstlisting}
 inter-chip/m4-fpga/bcd/codes/m4/GCC_Project/output/bin/m4.bin
     \end{lstlisting}
-    is generated.
     \item Flash both FPGA and M4 .bin files to the Vaman-Pygmy by resetting it
-    to bootloader mode and entering the following command at a terminal window.
+    to bootloader mode and entering the following command at a terminal window
     \begin{lstlisting}
 python3 /path/to/tinyfpga-programmer-gui.py --port /dev/ttyACMxx --mode m4-fpga --m4app /path/to/m4.bin --appfpga /path/to/AL4S3B_FPGA_Top.bin --reset
     \end{lstlisting}
@@ -77,9 +76,8 @@ be displayed on the seven-segment display.
 
 \subsubsection{Exercises}
 \begin{enumerate}
-    \item Create code for an incrementing encoder instead of a display decoder
-    as demonstrated in this subsection.
+    \item Create code for an incrementing encoder instead of a display decoder.
     \item Extend the code to perform mathematical operations modulo 10 and
-    display the result. Use two sets of four inputs.
+    display the result.
     \item Extend the code to accommodate hexadecimal digits.
 \end{enumerate}
