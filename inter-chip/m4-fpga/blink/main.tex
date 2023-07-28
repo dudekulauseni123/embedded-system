@@ -1,0 +1,68 @@
+\subsection{Onboard LED}
+This subsection illustrates the interface between the ARM Cortex-M4 subsystem
+and the eFPGA subsystem onboard the Vaman-Pygmy through a blink program, where
+the GPIO pins corresponding to the onboard LEDs are exposed by the FPGA
+platform.
+
+\subsubsection{Components}
+The components required are listed in
+\autoref{tab:esp32-m4-fpga-blink-components}.
+\begin{table}[!ht]
+    \centering
+    \input{inter-chip/m4-fpga/blink/tables/components.tex}
+    \caption{Components Required for Controlling the Onboard LED.}
+    \label{tab:esp32-m4-fpga-blink-components}
+\end{table}
+
+\subsubsection{Building}
+\begin{enumerate}
+    \item Build the FPGA project .bin file by entering the following commands at
+    a terminal window.
+    \begin{lstlisting}
+# The following variable can be sourced from .shellrc or .venv/bin/activate
+export QORC_SDK_PATH=/path/to/pygmy-sdk
+cd inter-chip/m4-fpga/blink/codes/fpga
+make
+    \end{lstlisting}
+    \item On building successfully, the .bin file is generated at
+    \begin{lstlisting}
+inter-chip/m4-fpga/blink/codes/fpga/rtl/AL4S3B_FPGA_Top.bin
+    \end{lstlisting}
+    \item Edit the variable PROJ\_ROOT in the following file to point to the
+    location of the pygmy-sdk folder on your system.
+    \begin{lstlisting}
+inter-chip/m4-fpga/blink/codes/m4/GCC_Project/config.mk
+    \end{lstlisting}
+    \item Build the M4 project .bin file by entering the following commands at a
+    terminal window.
+    \begin{lstlisting}
+cd inter-chip/m4-fpga/blink/codes/m4/GCC_Project
+make -j4
+    \end{lstlisting}
+    \item On building successfully, the .bin file is generated at
+    \begin{lstlisting}
+inter-chip/m4-fpga/blink/codes/m4/GCC_Project/output/bin/m4.bin
+    \end{lstlisting}
+    \item Flash both FPGA and M4 .bin files to the Vaman-Pygmy by resetting it
+    to bootloader mode and entering the following command at a terminal window.
+    \begin{lstlisting}
+python3 /path/to/tinyfpga-programmer-gui.py --port /dev/ttyACMxx --mode m4-fpga --m4app /path/to/m4.bin --appfpga /path/to/AL4S3B_FPGA_Top.bin --reset
+    \end{lstlisting}
+    where /dev/ttyACMxx is the port at which the Vaman board is available. This
+    can be obtained by inspecting the output of the following command (requires
+    root/sudo privileges).
+    \begin{lstlisting}
+dmesg -w
+    \end{lstlisting}
+\end{enumerate}
+
+\subsubsection{Demonstration}
+All three LEDs onboard the Vaman will toggle every one second when the Vaman
+boots normally.
+
+\subsubsection{Exercises}
+\begin{enumerate}[resume]
+    \item Find out the addresses corresponding to the GPIO module by inspecting
+    the code in pygmy-sdk, as well as in this folder.
+    \item Create code to blink each LED in turn.
+\end{enumerate}

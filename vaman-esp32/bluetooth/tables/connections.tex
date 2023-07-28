@@ -147,7 +147,7 @@
 \ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{152pt*\gnumericScale}@{}}x\end{tabular}}
 \ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{140pt*\gnumericScale}@{}}x\end{tabular}}
 
-\begin{longtable}[c]{%
+\begin{tabular}[c]{%
 	b{\gnumericColA}%
 	b{\gnumericColB}%
 	}
@@ -231,7 +231,7 @@
 	{\gnumericPB{\centering}\gnumbox{g}}
 \\
 \hhline{|-|-|}
-\end{longtable}
+\end{tabular}
 
 \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{\languagename}}
 \gnumericTableEnd

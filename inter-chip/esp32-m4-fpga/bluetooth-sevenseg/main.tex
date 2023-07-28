@@ -1,0 +1,59 @@
+\subsection{Bluetooth-Controlled Seven-Segment Display}
+This subsection demonstrates how to control seven-segment display using EOS-S3 and
+ESP32 through SPI protocol. Here, ESP32 acts as master and EOS-S3 acts as slave.
+The values that are entered in Dabble Terminal are received by ESP32 through
+Bluetooth and the values are transferred to EOS-S3 through SPI. This is 
+facilitated only when all 4 jumpers on the board are closed.
+\subsubsection{Components}
+
+\begin{table}[!ht]
+\centering
+\input{inter-chip/esp32-m4-fpga/bluetooth-sevenseg/tables/components.tex}
+\caption{Components}
+\label{table:ble-components-arm}
+\end{table}
+\begin{enumerate}
+\item Now connect the Seven Segment to the Vaman board according to the given 
+Table \autoref{table:ble-connections-arm}.
+\end{enumerate}
+\begin{table}[!ht]
+\centering
+\input{inter-chip/esp32-m4-fpga/bluetooth-sevenseg/tables/connections.tex}
+\caption{Connections}
+\label{table:ble-connections-arm}
+\end{table}
+
+\subsubsection{Building and Flashing}
+\begin{enumerate}[resume]
+\item Build the ESP32 firmware
+\begin{lstlisting}
+cd inter-chip/esp32-m4-fpga/bluetooth-sevenseg/codes/spi_esp32
+pio run
+\end{lstlisting} 
+
+\item Flash ESP32 firmware (connect Arduino-UART)
+\begin{lstlisting}
+pio run -t upload
+\end{lstlisting} 
+
+\item  Modify line 140 of config.mk to setup path to pygmy-sdk and then build m4
+firmware using
+\begin{lstlisting}
+cd spi_m4/GCC_Project
+make
+\end{lstlisting}
+
+\item If using termux, send output/bin/spi{\_}m4.bin to PC using
+\begin{lstlisting}
+scp output/spi_m4.bin username@IPaddress:
+\end{lstlisting}
+
+\item Connect usb cable to vaman board and Flash eos s3 soc, using
+\begin{lstlisting}
+sudo python3 <Type path to tiny fpga programmer application> --port /dev/ttyACM0 --appfpga top.bin --m4app spi_m4.bin --mode m4-fpga --reset
+\end{lstlisting} 
+
+\item Install the \textbf{Dabble app} on the Mobile from the \textbf{Playstore}.
+Connect it to the \textbf{ESP32} on the Vaman Board using \textbf{Bluetooth}. 
+Change the controls to \textbf{Terminal} to control seven-segment display.
+\end{enumerate}
