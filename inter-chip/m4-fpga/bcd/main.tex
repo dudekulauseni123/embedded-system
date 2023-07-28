@@ -5,6 +5,7 @@ otherwise known as a 7447 IC. The GPIO interface is exposed to the M4 by the
 FPGA platform.
 
 \subsubsection{Components}
+The components required are listed in \autoref{tab:m4-fpga-bcd-components}.
 \begin{table}[!ht]
     \centering
     \input{inter-chip/m4-fpga/bcd/tables/components.tex}
@@ -13,12 +14,9 @@ FPGA platform.
 \end{table}
 
 \subsubsection{Connections}
-\begin{table}[!ht]
-    \centering
-    \input{inter-chip/m4-fpga/bcd/tables/sevenseg-connections.tex}
-    \caption{Connections for Interfacing the Seven-Segment Display with Vaman-Pygmy.}
-    \label{tab:m4-fpga-bcd-sevenseg-connections}
-\end{table}
+The connections to be made between the seven-segment display and Vaman board are
+listed in \autoref{tab:esp32-fpga-sevenseg-display-connections}. The equivalent
+7447 IC input pins are listed in \autoref{tab:m4-fpga-bcd-bcd-connections}.
 
 \begin{table}[!ht]
     \centering

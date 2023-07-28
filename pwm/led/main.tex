@@ -4,6 +4,7 @@ and the Vaman-Pygmy in adjusting the brightness of an LED onboard the
 Vaman-Pygmy.
 
 \subsection{Components}
+The components required are listed in \autoref{tab:pwm-led-components}.
 \begin{table}[!ht]
     \centering
     \input{pwm/led/tables/components.tex}
@@ -12,6 +13,8 @@ Vaman-Pygmy.
 \end{table}
 
 \subsection{Connections}
+The connections on the Vaman board are listed in
+\autoref{tab:pwm-led-connections}.
 \begin{table}[!ht]
     \centering
     \input{pwm/led/tables/connections.tex}
@@ -81,4 +84,12 @@ http://<VAMAN-IP>/pwm
     and enter the PWM value, which is an integer between 0 and 255.
     \item On entering the value, the brightness of the green LED will change 
     according to the PWM value.
+\end{enumerate}
+
+\subsection{Exercises}
+\begin{enumerate}[resume]
+    \item Add code to gradually increase or decrease brightness of the onboard
+    LED.
+    \item Avoid using the M4 platform entirely by having the ESP32 write to the
+    appropriate memory address of the PWM using SPI directly.
 \end{enumerate}

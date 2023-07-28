@@ -4,6 +4,8 @@ and the FPGA onboard the Vaman-Pygmy by controlling a seven segment display
 remotely.
 
 \subsubsection{Components}
+The components required are listed in
+\autoref{tab:esp32-fpga-sevenseg-components}.
 \begin{table}[!ht]
     \centering
     \input{inter-chip/esp32-fpga/sevenseg/tables/components.tex}
@@ -12,12 +14,10 @@ remotely.
 \end{table}
 
 \subsubsection{Connections}
-\begin{table}[!ht]
-    \centering
-    \input{inter-chip/esp32-fpga/sevenseg/tables/vaman-connections.tex}
-    \caption{Connections to establish SPI between Vaman-ESP32 and Vaman-Pygmy.}
-    \label{tab:esp32-fpga-sevenseg-vaman-connections}
-\end{table}
+The connections to be made on the Vaman board are listed in
+\autoref{tab:esp32-fpga-led-connections}. The connections to be made with the
+seven segment display are listed in
+\autoref{tab:esp32-fpga-sevenseg-display-connections}.
 
 \begin{table}[!ht]
     \centering

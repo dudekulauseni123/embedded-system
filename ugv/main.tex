@@ -2,6 +2,7 @@
 This chapter describes the setup of an Unmanned Ground Vehicle (UGV) and a few 
 experiments that can be performed on it with the Vaman board.
 \section{Components Table}
+The components of the UGV kit are listed in \autoref{Tab:components}.
 \begin{table}[!ht]
 \centering
 	\input{ugv/tables/components}
@@ -74,7 +75,8 @@ Assemble the Chassis using the provided nuts/screws, Wheels, and parts.
 	\label{Tab:connections3}
 \end{table}
 %\item Make the Circuit Connections as per the \autoref{Tab:connections3}.
-\begin{enumerate}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+
 \item Connect the Arduino-UART pins to the Vaman ESP32 pins according to \autoref{tab:arduino-uart}.
 \item For Bluetooth toycar connect the circuits connection as per \autoref{Tab:dcmotor} and  \autoref{Tab:connections3}.
 \begin{table}[!ht]
@@ -103,7 +105,7 @@ as per \autoref{Tab:dcmotor} , \autoref{Tab:connections} and
 \end{enumerate}
 
 \section{Code Execution For Bluetooth Toycar}
-\begin{enumerate}[resume]
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \item Now,Execute the following code
 \begin{lstlisting}
 vaman/toycar/codes/bluetooth_toycar/src
@@ -123,7 +125,8 @@ pio run -t upload
 \end{enumerate}
 
 \section{Code Execution for Integrated Bluetooth Toycar}
-\begin{enumerate}[resume]
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+
 \item Now,Execute the following code 
 
 \begin{lstlisting}
@@ -136,7 +139,7 @@ cd esp32_pwmctrl
 pio run
 \end{lstlisting} 
 
-\item Flash ESP32 firmware ( connect Arduino-UART  )
+\item Flash ESP32 firmware (connect Arduino-UART)
 \begin{lstlisting}
 pio run -t nobuild -t upload
 \end{lstlisting} 
@@ -178,7 +181,7 @@ Connect it to the \textbf{ESP32} on the Vaman Board using \textbf{Bluetooth}.
 Change the controls to \textbf{Joystick mode} as shown in
 \autoref{fig:ble_app} to navigate the UGV.
 \end{enumerate}
-\subsection{Working }
+\subsection{Working}
 On the hardware level there are three key points: SPI,Wishbone Interfacing and Address Mapping. Vaman Board, we have an EOS S3 and ESP32. The Communication between these two happens via Serial Peripheral Interface(SPI).\\
 \vspace{0.25cm}
 

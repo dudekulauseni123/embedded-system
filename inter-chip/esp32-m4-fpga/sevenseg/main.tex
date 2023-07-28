@@ -5,27 +5,14 @@ seven-segment display via the ARM interface, where the GPIO pins are exposed by
 the FPGA platform.
 
 \subsubsection{Components}
-\begin{table}[!ht]
-    \centering
-    \input{inter-chip/esp32-m4-fpga/sevenseg/tables/components.tex}
-    \caption{Components Required for Controlling the Seven-Segment Display via SPI.}
-    \label{tab:esp32-m4-fpga-sevenseg-components}
-\end{table}
+The components required are listed in
+\autoref{tab:esp32-fpga-sevenseg-components}.
 
 \subsubsection{Connections}
-\begin{table}[!ht]
-    \centering
-    \input{inter-chip/esp32-m4-fpga/sevenseg/tables/vaman-connections.tex}
-    \caption{Connections to Establish SPI Between Vaman-ESP32 and Vaman-Pygmy.}
-    \label{tab:esp32-m4-fpga-sevenseg-vaman-connections}
-\end{table}
-
-\begin{table}[!ht]
-    \centering
-    \input{inter-chip/esp32-m4-fpga/sevenseg/tables/sevenseg-connections.tex}
-    \caption{Connections to Interface Seven-Segment Display with Vaman-Pygmy.}
-    \label{tab:esp32-m4-fpga-sevenseg-display-connections}
-\end{table}
+The connections required on the Vaman board are listed in
+\autoref{tab:esp32-fpga-led-connections}. The connections to interface the
+seven-segment display are listed in
+\autoref{tab:esp32-fpga-sevenseg-display-connections}.
 
 \subsubsection{Building}
 \begin{enumerate}

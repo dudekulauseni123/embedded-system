@@ -3,6 +3,7 @@ This section illustrates the use of SPI Communication between the Vaman-ESP32
 and the Vaman-Pygmy in adjusting the speed of the UGV.
 
 \subsection{Components}
+The components required are listed in \autoref{tab:pwm-ugv-components}.
 \begin{table}[!ht]
     \centering
     \input{pwm/ugv/tables/components.tex}
@@ -11,6 +12,7 @@ and the Vaman-Pygmy in adjusting the speed of the UGV.
 \end{table}
 
 \subsection{Connections}
+
 \begin{table}[!ht]
     \centering
     \input{pwm/ugv/tables/connections.tex}
@@ -80,4 +82,18 @@ http://<VAMAN-IP>/pwm
     and enter the PWM value, which is an integer between 0 and 255.
     \item On entering the value, the speed of the UGV will change according to
     the PWM value.
+\end{enumerate}
+
+\subsection{Exercises}
+\begin{enumerate}[resume]
+    \item Introduce a slow accelerating motion in the UGV by stepping up the
+    PWM. Take user inputs for starting PWM and step size. Additionally, you can
+    also let the user control whether the PWM will step-up (accelerate) or
+    step-down (decelerate).
+    \item Modify the Verilog code to have four separate PWMs available, and
+    connect the motor pins to each PWM. Also, rewrite the M4 code for
+    facilitating the use of these four PWMs.
+    \item Avoid using the M4 platform entirely, by writing directly to the
+    correct memory locations from the Vaman-ESP32 using SPI. This will improve
+    the latency in the autonomous vehicle system.
 \end{enumerate}

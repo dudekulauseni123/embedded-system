@@ -5,6 +5,8 @@ the GPIO pins corresponding to the onboard LEDs are exposed by the FPGA
 platform.
 
 \subsubsection{Components}
+The components required are listed in
+\autoref{tab:esp32-m4-fpga-blink-components}.
 \begin{table}[!ht]
     \centering
     \input{inter-chip/m4-fpga/blink/tables/components.tex}
@@ -22,27 +24,25 @@ export QORC_SDK_PATH=/path/to/pygmy-sdk
 cd inter-chip/m4-fpga/blink/codes/fpga
 make
     \end{lstlisting}
-    \item On building successfully, the file
+    \item On building successfully, the .bin file is generated at
     \begin{lstlisting}
 inter-chip/m4-fpga/blink/codes/fpga/rtl/AL4S3B_FPGA_Top.bin
     \end{lstlisting}
-    is generated.
-    \item Edit the variable PROJ\_ROOT in
+    \item Edit the variable PROJ\_ROOT in the following file to point to the
+    location of the pygmy-sdk folder on your system.
     \begin{lstlisting}
 inter-chip/m4-fpga/blink/codes/m4/GCC_Project/config.mk
     \end{lstlisting}
-    to point to the location of the pygmy-sdk folder on your system.
     \item Build the M4 project .bin file by entering the following commands at a
     terminal window.
     \begin{lstlisting}
 cd inter-chip/m4-fpga/blink/codes/m4/GCC_Project
 make -j4
     \end{lstlisting}
-    \item On building successfully, the file
+    \item On building successfully, the .bin file is generated at
     \begin{lstlisting}
 inter-chip/m4-fpga/blink/codes/m4/GCC_Project/output/bin/m4.bin
     \end{lstlisting}
-    is generated.
     \item Flash both FPGA and M4 .bin files to the Vaman-Pygmy by resetting it
     to bootloader mode and entering the following command at a terminal window.
     \begin{lstlisting}

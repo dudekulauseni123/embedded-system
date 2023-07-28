@@ -4,6 +4,8 @@ and the ARM Cortex-M4 subsystem onboard the Vaman-Pygmy by toggling the LEDs via
 the ARM interface, where the GPIO pins are exposed by the FPGA platform.
 
 \subsubsection{Components}
+The required components are listed in
+\autoref{tab:esp32-m4-fpga-led-components}.
 \begin{table}[!ht]
     \centering
     \input{inter-chip/esp32-m4-fpga/led/tables/components.tex}
@@ -12,12 +14,8 @@ the ARM interface, where the GPIO pins are exposed by the FPGA platform.
 \end{table}
 
 \subsubsection{Connections}
-\begin{table}[!ht]
-    \centering
-    \input{inter-chip/esp32-m4-fpga/led/tables/connections.tex}
-    \caption{Connections to establish SPI between Vaman-ESP32 and Vaman-Pygmy.}
-    \label{tab:esp32-m4-fpga-led-connections}
-\end{table}
+The connections to be made on the Vaman are listed in
+\autoref{tab:esp32-fpga-led-connections}.
 
 \subsubsection{Building}
 \begin{enumerate}
